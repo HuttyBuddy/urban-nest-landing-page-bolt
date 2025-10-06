@@ -81,7 +81,7 @@ export default function EarlyAccessForm() {
             <div className="flex items-start gap-3">
               <Sparkles className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
               <div className="text-sm text-gray-700">
-                <span className="font-bold text-charcoal">Early Access Benefits:</span> Lifetime launch pricing, all six core features (hyper-local engine, Google AI, brand customization, CRM integration, listing automation, digital clone for video content), unlimited content generation, and priority support.
+                <span className="font-bold text-charcoal">Early Access Benefits:</span> Lifetime launch pricing, all core features (hyper-local engine, Google AI Suite, brand customization, CRM integration, listing automation, digital clone for video content), unlimited content generation, and priority support.
               </div>
             </div>
           </div>
