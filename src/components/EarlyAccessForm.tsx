@@ -72,7 +72,7 @@ export default function EarlyAccessForm() {
             Join 500+ Agents Transforming Their Marketing
           </h2>
           <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
-            Get <span className="font-bold text-gold">exclusive early access</span> to all six game-changing features: hyper-local content, Google AI generation, brand customization, CRM integration, listing automation, and your own digital avatar.
+            Get exclusive early access to all game-changing features: hyper-local content, Google AI suite, brand customization, CRM integration, listing automation, and your own digital avatar.
           </p>
         </div>
 
