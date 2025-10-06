@@ -13,7 +13,7 @@ export default function SocialProof() {
     {
       name: "Vanessa Tanner",
       role: "Realtor, RE/MAX Gold",
-      location: "Roseville, CA",
+      location: "Vacaville, CA",
       quote: "The brand customization is spot-on. Every post sounds like me. Plus, the CRM integration means I never have to copy-paste client data again. Worth every penny.",
       rating: 5,
       metric: "10x content output"
