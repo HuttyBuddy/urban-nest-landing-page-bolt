@@ -76,7 +76,7 @@ export default function Features() {
 
         <div className="mb-20 lg:mb-28">
           <h3 className="text-2xl sm:text-3xl font-bold text-charcoal mb-4 text-center">
-            Six Powerful Features That Transform Your Marketing
+            Powerful AI Features That Transform Your Marketing
           </h3>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
             A complete marketing ecosystem designed specifically for real estate professionals
