@@ -65,8 +65,8 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-2 text-gray-400">
                 <Mail className="w-4 h-4" />
-                <a href="mailto:hello@urbannest.ai" className="hover:text-gold transition-colors">
-                  hello@urbannest.ai
+                <a href="mailto:huttybuddy@urbannest.dev" className="hover:text-gold transition-colors">
+                  huttybuddy@urbannest.dev
                 </a>
               </li>
             </ul>
