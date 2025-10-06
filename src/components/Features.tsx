@@ -114,7 +114,7 @@ export default function Features() {
           <div className="mt-12 text-center">
             <div className="inline-flex items-center gap-2 text-charcoal font-semibold bg-gold/10 px-6 py-3 rounded-lg">
               <Sparkles className="w-5 h-5 text-gold" />
-              <span>All six features work together seamlessly to 10x your marketing efficiency</span>
+              <span>All features work together seamlessly to 10x your marketing efficiency</span>
             </div>
           </div>
         </div>
