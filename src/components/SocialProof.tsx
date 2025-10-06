@@ -19,9 +19,9 @@ export default function SocialProof() {
       metric: "10x content output"
     },
     {
-      name: "Jennifer Rodriguez",
-      role: "Team Lead, RE/MAX",
-      location: "Miami, FL",
+      name: "Scott Brown",
+      role: "Realtor, RE/MAX Gold",
+      location: "Roseville, CA",
       quote: "The listing automation feature is a lifesaver. New listings get marketed across all channels instantly. My entire team creates video content with their digital clones now. The ROI is incredible.",
       rating: 5,
       metric: "50% cost reduction"
