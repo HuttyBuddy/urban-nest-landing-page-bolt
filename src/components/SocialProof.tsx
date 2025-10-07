@@ -85,18 +85,14 @@ export default function SocialProof() {
               </p>
 
               <div className="pt-6 border-t border-gray-100">
-                <div className="flex items-start justify-between">
-                  <div>
-                    <div className="font-bold text-charcoal">
-                      {testimonial.name}
-                    </div>
-                    <div className="text-sm text-gray-600">
-                      {testimonial.role}
-                    </div>
-                    <div className="text-xs text-gray-500 mt-1">
-                      {testimonial.location}
-                    </div>
-                  </div>
+                <div className="font-bold text-charcoal">
+                  {testimonial.name}
+                </div>
+                <div className="text-sm text-gray-600">
+                  {testimonial.role}
+                </div>
+                <div className="text-xs text-gray-500 mt-1">
+                  {testimonial.location}
                 </div>
                 <div className="mt-4 inline-flex items-center gap-2 px-3 py-1 bg-gold/10 rounded-full text-xs font-semibold text-charcoal">
                   <TrendingUp className="w-3 h-3" />
