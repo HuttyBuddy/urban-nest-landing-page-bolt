@@ -7,7 +7,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-2">
             <Home className="w-6 h-6 text-gold" />
-            <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-gold to-yellow-500 bg-clip-text text-transparent">
+            <span className="text-xl sm:text-2xl font-bold text-white">
               Urban Nest
             </span>
           </div>
