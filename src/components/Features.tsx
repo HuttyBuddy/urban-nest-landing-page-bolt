@@ -1,4 +1,4 @@
-import { Sparkles, Database, Zap, MessageSquare, Mail, FileText, ArrowRight, CheckCircle, MapPin, Bot, Palette, TrendingUp } from 'lucide-react';
+import { Sparkles, Database, Zap, MessageSquare, Mail, FileText, CheckCircle, MapPin, Bot, Palette } from 'lucide-react';
 
 export default function Features() {
   const coreFeatures = [
