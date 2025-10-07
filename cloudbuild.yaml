@@ -7,10 +7,18 @@ steps:
       - 'urban-nest-landing-page'
       - '--source'
       - '.'
+      - '--project'
+      - '$PROJECT_ID'  # <-- Add this line
       - '--region'
       - 'us-west1'
       - '--platform'
       - 'managed'
       - '--allow-unauthenticated'
 options:
-  logging: CLOUD_LOGGING_ONLY
+  logging: CLOUD_LOGGING_ONLY```
+
+**What to do next:**
+
+1.  Update your `cloudbuild.yaml` file with this change.
+2.  Commit the file and push it to your repository.
+3.  Cloud Build will trigger a new build, which should now have the correct project context to execute the deployment.
