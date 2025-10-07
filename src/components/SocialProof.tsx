@@ -22,7 +22,7 @@ export default function SocialProof() {
       name: "Scott Brown",
       role: "Realtor, RE/MAX Gold",
       location: "Roseville, CA",
-      quote: "The listing automation feature is a lifesaver. New listings get marketed across all channels instantly. I creates video content with their digital clones now. The ROI is incredible.",
+      quote: "The listing automation feature is a lifesaver. New listings get marketed across all channels instantly. I create video content with my own digital clone now. The ROI is incredible.",
       rating: 5,
       metric: "50% cost reduction"
     }
