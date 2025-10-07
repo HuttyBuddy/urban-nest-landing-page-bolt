@@ -5,7 +5,8 @@ export default {
     extend: {
       colors: {
         charcoal: '#495155',
-        gold: '#EBCA71',
+        gold: '#D4AF37',
+        'gold-light': '#EBCA71',
       },
       fontFamily: {
         heading: ['Montserrat', 'sans-serif'],

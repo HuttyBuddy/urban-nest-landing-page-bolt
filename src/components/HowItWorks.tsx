@@ -41,7 +41,7 @@ export default function HowItWorks() {
     <section id="how-it-works" className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 lg:mb-20">
-          <div className="inline-block px-4 py-2 bg-gold/10 rounded-full mb-4 text-sm font-semibold text-charcoal">
+          <div className="inline-block px-4 py-2 bg-gold/20 border border-gold/30 rounded-full mb-4 text-sm font-semibold text-charcoal shadow-sm">
             Simple 3-Step Process
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal mb-6">
@@ -56,7 +56,7 @@ export default function HowItWorks() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mb-16">
           {steps.map((step, index) => (
             <div key={index} className="relative">
-              <div className="bg-gradient-main p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 h-full border-2 border-transparent hover:border-gold">
+              <div className="bg-gradient-main p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 h-full border-2 border-gold/20 hover:border-gold">
                 <div className="flex items-start justify-between mb-6">
                   <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-gold to-yellow-500 flex items-center justify-center shadow-lg">
                     <step.icon className="w-8 h-8 text-white" strokeWidth={2} />
@@ -67,7 +67,7 @@ export default function HowItWorks() {
                 </div>
 
                 <div className="mb-4">
-                  <div className="text-sm font-bold text-gold mb-2">
+                  <div className="text-sm font-bold text-gold drop-shadow-sm mb-2">
                     STEP {index + 1}
                   </div>
                   <h3 className="text-2xl font-bold text-charcoal mb-3">
@@ -81,7 +81,7 @@ export default function HowItWorks() {
                 <ul className="space-y-3">
                   {step.details.map((detail, detailIndex) => (
                     <li key={detailIndex} className="flex items-center gap-3 text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 text-gold flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-gold drop-shadow-sm flex-shrink-0" />
                       <span>{detail}</span>
                     </li>
                   ))}

@@ -34,7 +34,7 @@ export default function Hero({ onGetStarted }: HeroProps) {
         </div>
 
         <div className="text-center max-w-4xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold/20 rounded-full mb-6 text-sm font-semibold text-charcoal animate-pulse">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold/30 border border-gold/40 rounded-full mb-6 text-sm font-semibold text-charcoal shadow-sm animate-pulse">
             <Users className="w-4 h-4" />
             <span>Join 500+ Agents Transforming Their Marketing</span>
           </div>
@@ -74,37 +74,37 @@ export default function Hero({ onGetStarted }: HeroProps) {
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 max-w-5xl mx-auto mb-8">
             <div className="flex flex-col items-center gap-2 p-3 bg-white rounded-lg shadow-sm border border-gray-100">
-              <div className="w-8 h-8 rounded-full bg-gold/20 flex items-center justify-center">
+              <div className="w-8 h-8 rounded-full bg-gold/50 border border-gold/60 flex items-center justify-center shadow-sm">
                 <TrendingUp className="w-4 h-4 text-charcoal" />
               </div>
               <span className="text-xs font-semibold text-charcoal text-center">Hyper-Local Engine</span>
             </div>
             <div className="flex flex-col items-center gap-2 p-3 bg-white rounded-lg shadow-sm border border-gray-100">
-              <div className="w-8 h-8 rounded-full bg-gold/20 flex items-center justify-center">
+              <div className="w-8 h-8 rounded-full bg-gold/50 border border-gold/60 flex items-center justify-center shadow-sm">
                 <svg className="w-4 h-4 text-charcoal" fill="currentColor" viewBox="0 0 24 24"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>
               </div>
               <span className="text-xs font-semibold text-charcoal text-center">Google AI Suite</span>
             </div>
             <div className="flex flex-col items-center gap-2 p-3 bg-white rounded-lg shadow-sm border border-gray-100">
-              <div className="w-8 h-8 rounded-full bg-gold/20 flex items-center justify-center">
+              <div className="w-8 h-8 rounded-full bg-gold/50 border border-gold/60 flex items-center justify-center shadow-sm">
                 <svg className="w-4 h-4 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" /></svg>
               </div>
               <span className="text-xs font-semibold text-charcoal text-center">Brand Customization</span>
             </div>
             <div className="flex flex-col items-center gap-2 p-3 bg-white rounded-lg shadow-sm border border-gray-100">
-              <div className="w-8 h-8 rounded-full bg-gold/20 flex items-center justify-center">
+              <div className="w-8 h-8 rounded-full bg-gold/50 border border-gold/60 flex items-center justify-center shadow-sm">
                 <svg className="w-4 h-4 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" /></svg>
               </div>
               <span className="text-xs font-semibold text-charcoal text-center">CRM Integration</span>
             </div>
             <div className="flex flex-col items-center gap-2 p-3 bg-white rounded-lg shadow-sm border border-gray-100">
-              <div className="w-8 h-8 rounded-full bg-gold/20 flex items-center justify-center">
+              <div className="w-8 h-8 rounded-full bg-gold/50 border border-gold/60 flex items-center justify-center shadow-sm">
                 <Clock className="w-4 h-4 text-charcoal" />
               </div>
               <span className="text-xs font-semibold text-charcoal text-center">Listing Automation</span>
             </div>
             <div className="flex flex-col items-center gap-2 p-3 bg-white rounded-lg shadow-sm border border-gray-100">
-              <div className="w-8 h-8 rounded-full bg-gold/20 flex items-center justify-center">
+              <div className="w-8 h-8 rounded-full bg-gold/50 border border-gold/60 flex items-center justify-center shadow-sm">
                 <Users className="w-4 h-4 text-charcoal" />
               </div>
               <span className="text-xs font-semibold text-charcoal text-center">Digital Avatar</span>
@@ -113,15 +113,15 @@ export default function Hero({ onGetStarted }: HeroProps) {
 
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center text-sm text-gray-600">
             <div className="flex items-center gap-2">
-              <Clock className="w-4 h-4 text-gold" />
+              <Clock className="w-4 h-4 text-gold drop-shadow-sm" />
               <span>Setup in 5 minutes</span>
             </div>
             <div className="flex items-center gap-2">
-              <TrendingUp className="w-4 h-4 text-gold" />
+              <TrendingUp className="w-4 h-4 text-gold drop-shadow-sm" />
               <span>10x your content output</span>
             </div>
             <div className="flex items-center gap-2">
-              <Users className="w-4 h-4 text-gold" />
+              <Users className="w-4 h-4 text-gold drop-shadow-sm" />
               <span>No credit card required</span>
             </div>
           </div>

@@ -76,7 +76,7 @@ export default function FAQ() {
     <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
-          <div className="inline-block px-4 py-2 bg-gold/10 rounded-full mb-4 text-sm font-semibold text-charcoal">
+          <div className="inline-block px-4 py-2 bg-gold/20 border border-gold/30 rounded-full mb-4 text-sm font-semibold text-charcoal shadow-sm">
             Questions & Answers
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal mb-6">
@@ -97,7 +97,7 @@ export default function FAQ() {
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 className="w-full px-6 py-6 flex items-start gap-4 text-left hover:bg-gray-50 transition-colors"
               >
-                <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center">
+                <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-gold/30 border border-gold/40 shadow-sm flex items-center justify-center">
                   <faq.icon className="w-5 h-5 text-charcoal" />
                 </div>
                 <div className="flex-1 min-w-0">

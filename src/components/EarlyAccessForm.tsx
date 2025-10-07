@@ -64,8 +64,8 @@ export default function EarlyAccessForm() {
 
       <div className="max-w-3xl mx-auto relative">
         <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold/20 rounded-full mb-6 text-sm font-semibold text-white animate-pulse">
-            <Gift className="w-4 h-4" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold/30 border border-gold/40 rounded-full mb-6 text-sm font-semibold text-white shadow-md animate-pulse">
+            <Gift className="w-4 h-4 drop-shadow-sm" />
             <span>Limited Time: Lock in Launch Pricing Forever</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -76,10 +76,10 @@ export default function EarlyAccessForm() {
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-2xl p-8 sm:p-10 border-2 border-gold/20">
-          <div className="mb-6 bg-gold/5 border-l-4 border-gold p-4 rounded">
+        <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-2xl p-8 sm:p-10 border-2 border-gold/30">
+          <div className="mb-6 bg-gold/10 border-l-4 border-gold shadow-sm p-4 rounded">
             <div className="flex items-start gap-3">
-              <Sparkles className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
+              <Sparkles className="w-5 h-5 text-gold drop-shadow-sm flex-shrink-0 mt-0.5" />
               <div className="text-sm text-gray-700">
                 <span className="font-bold text-charcoal">Early Access Benefits:</span> Lifetime launch pricing, all core features (hyper-local engine, Google AI Suite, brand customization, CRM integration, listing automation, digital clone for video content), unlimited content generation, and priority support.
               </div>
@@ -100,7 +100,7 @@ export default function EarlyAccessForm() {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="agent@example.com"
                 disabled={status === 'loading'}
-                className="block w-full pl-12 pr-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent transition-all disabled:bg-gray-100 disabled:cursor-not-allowed text-base"
+                className="block w-full pl-12 pr-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-gold transition-all disabled:bg-gray-100 disabled:cursor-not-allowed text-base"
                 required
               />
             </div>
@@ -158,11 +158,11 @@ export default function EarlyAccessForm() {
             </p>
             <div className="flex items-center justify-center gap-6 text-xs text-gray-600">
               <div className="flex items-center gap-1">
-                <CheckCircle className="w-3 h-3 text-gold" />
+                <CheckCircle className="w-3 h-3 text-gold drop-shadow-sm" />
                 <span>No credit card required</span>
               </div>
               <div className="flex items-center gap-1">
-                <CheckCircle className="w-3 h-3 text-gold" />
+                <CheckCircle className="w-3 h-3 text-gold drop-shadow-sm" />
                 <span>Cancel anytime</span>
               </div>
             </div>

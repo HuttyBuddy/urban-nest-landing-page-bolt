@@ -62,7 +62,7 @@ export default function Features() {
     <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 lg:mb-20">
-          <div className="inline-block px-4 py-2 bg-gold/10 rounded-full mb-4 text-sm font-semibold text-charcoal">
+          <div className="inline-block px-4 py-2 bg-gold/20 border border-gold/30 rounded-full mb-4 text-sm font-semibold text-charcoal shadow-sm">
             The Urban Nest Difference
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal mb-6">
@@ -85,12 +85,12 @@ export default function Features() {
             {coreFeatures.map((feature, index) => (
               <div
                 key={index}
-                className="bg-gradient-main p-8 rounded-2xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-transparent hover:border-gold relative overflow-hidden group"
+                className="bg-gradient-main p-8 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-gold/20 hover:border-gold relative overflow-hidden group"
               >
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gold/5 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500"></div>
                 <div className="relative">
                   <div className="flex items-start justify-between mb-4">
-                    <div className="w-14 h-14 rounded-xl bg-gold bg-opacity-30 flex items-center justify-center group-hover:bg-opacity-50 transition-all">
+                    <div className="w-14 h-14 rounded-xl bg-gold/50 border-2 border-gold/60 shadow-md flex items-center justify-center group-hover:bg-gold/70 group-hover:border-gold transition-all">
                       <feature.icon className="w-7 h-7 text-charcoal" strokeWidth={2} />
                     </div>
                     <div className="w-6 h-6 bg-charcoal rounded-full flex items-center justify-center text-white font-bold text-xs">
@@ -103,7 +103,7 @@ export default function Features() {
                   <p className="text-gray-600 leading-relaxed mb-4 text-sm">
                     {feature.description}
                   </p>
-                  <div className="flex items-start gap-2 text-xs font-semibold text-gold bg-gold/10 p-3 rounded-lg">
+                  <div className="flex items-start gap-2 text-xs font-semibold text-gold bg-gold/20 border border-gold/30 p-3 rounded-lg shadow-sm">
                     <CheckCircle className="w-4 h-4 flex-shrink-0 mt-0.5" />
                     <span>{feature.benefit}</span>
                   </div>
@@ -112,8 +112,8 @@ export default function Features() {
             ))}
           </div>
           <div className="mt-12 text-center">
-            <div className="inline-flex items-center gap-2 text-charcoal font-semibold bg-gold/10 px-6 py-3 rounded-lg">
-              <Sparkles className="w-5 h-5 text-gold" />
+            <div className="inline-flex items-center gap-2 text-charcoal font-semibold bg-gold/20 border border-gold/30 px-6 py-3 rounded-lg shadow-sm">
+              <Sparkles className="w-5 h-5 text-gold drop-shadow-sm" />
               <span>All features work together seamlessly to 10x your marketing efficiency</span>
             </div>
           </div>
@@ -130,11 +130,11 @@ export default function Features() {
             {contentTypes.map((item, index) => (
               <div
                 key={index}
-                className="bg-gradient-main p-8 rounded-2xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-transparent hover:border-gold relative overflow-hidden group"
+                className="bg-gradient-main p-8 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-gold/20 hover:border-gold relative overflow-hidden group"
               >
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gold/5 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500"></div>
                 <div className="relative">
-                  <div className="w-14 h-14 rounded-xl bg-gold bg-opacity-30 flex items-center justify-center mb-6 group-hover:bg-opacity-50 transition-all">
+                  <div className="w-14 h-14 rounded-xl bg-gold/50 border-2 border-gold/60 shadow-md flex items-center justify-center mb-6 group-hover:bg-gold/70 group-hover:border-gold transition-all">
                     <item.icon className="w-7 h-7 text-charcoal" strokeWidth={2} />
                   </div>
                   <h4 className="text-xl font-bold text-charcoal mb-4">
