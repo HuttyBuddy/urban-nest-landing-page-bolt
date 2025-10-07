@@ -1,0 +1,14 @@
+steps:
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: 'gcloud'
+  args:
+    - 'run'
+    - 'deploy'
+    - 'urban-nest-landing-page' # We'll call this new service "urban-nest-landing-page"
+    - '--source'
+    - '.'
+    - '--region'
+    - 'us-west1'
+    - '--platform'
+    - 'managed'
+    - '--allow-unauthenticated'
