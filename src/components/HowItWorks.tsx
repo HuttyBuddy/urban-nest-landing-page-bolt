@@ -7,7 +7,7 @@ export default function HowItWorks() {
       title: "Tell Us About You",
       description: "Connect your CRM, upload sample content for brand customization, and define your local market area. Takes just 5 minutes.",
       details: [
-        "Connect your CRM (Salesforce, HubSpot, etc.)",
+        "Connect your CRM (KV Core, HubSpot, etc.)",
         "Upload samples for brand voice training",
         "Set your hyper-local market area"
       ],
