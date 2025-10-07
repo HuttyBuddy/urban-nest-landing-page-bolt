@@ -70,21 +70,23 @@ export default function SocialProof() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100"
+              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 flex flex-col"
             >
-              <div className="flex items-center gap-1 mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-gold text-gold" />
-                ))}
+              <div className="flex-grow">
+                <div className="flex items-center gap-1 mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-gold text-gold" />
+                  ))}
+                </div>
+
+                <Quote className="w-8 h-8 text-gold/30 mb-4" />
+
+                <p className="text-gray-700 leading-relaxed mb-6 italic">
+                  "{testimonial.quote}"
+                </p>
               </div>
 
-              <Quote className="w-8 h-8 text-gold/30 mb-4" />
-
-              <p className="text-gray-700 leading-relaxed mb-6 italic">
-                "{testimonial.quote}"
-              </p>
-
-              <div className="pt-6 border-t border-gray-100">
+              <div className="pt-6 border-t border-gray-100 mt-auto">
                 <div className="font-bold text-charcoal">
                   {testimonial.name}
                 </div>
