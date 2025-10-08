@@ -7,8 +7,9 @@ steps:
       - 'urban-nest-landing-page'
       - '--source'
       - '.'
+      # This line is critical to specify the project
       - '--project'
-      - '$PROJECT_ID'  # This line is critical
+      - '$PROJECT_ID'
       - '--region'
       - 'us-west1'
       - '--platform'
