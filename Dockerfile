@@ -1,3 +1,12 @@
+# --- Build stage ---
+# This stage installs dependencies and builds your static assets
+FROM node:20 AS build
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci
+COPY . .
+RUN npm run build
+
 # --- Run stage ---
 # This stage serves the built assets from a lightweight server
 FROM node:20-alpine
