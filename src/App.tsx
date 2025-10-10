@@ -16,7 +16,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-main">
+    <div className="bg-gray-50 text-gray-800">
       <Header />
       <Hero onGetStarted={scrollToForm} />
       <Features />
