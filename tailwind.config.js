@@ -6,9 +6,7 @@ export default {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-main': 'linear-gradient(to right, #495155, #2c3e50)',
-      }
+     // This section might have other customizations from your repo, which is fine!
     },
   },
   plugins: [],
