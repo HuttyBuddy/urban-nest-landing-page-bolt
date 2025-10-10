@@ -14,7 +14,7 @@ export default function EarlyAccessForm() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     if (!validateEmail(email)) { setStatus('error'); setMessage('Please enter a valid email address'); return; }
-    if (!FORM_URL) { setStatus('error'); setMessage('Missing VITE_FORM_ENDPOINT in .env.production'); return; }
+    if (!FORM_URL) { setStatus('error'); setMessage('The form endpoint is not configured. Please check the environment variables.'); }
 
     setStatus('loading'); setMessage('');
     try {
