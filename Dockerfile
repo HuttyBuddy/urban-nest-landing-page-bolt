@@ -19,7 +19,7 @@ RUN npm i -g serve
 
 # Correctly copy the built files from the 'build' stage
 # This copies the CONTENTS of the 'dist' folder into the current '/app' directory
-COPY --from=build /app/dist .
+COPY --from=build /app/build .
 
 # Set and expose the port Cloud Run will use
 ENV PORT=8080
