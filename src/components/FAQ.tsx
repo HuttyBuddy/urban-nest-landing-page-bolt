@@ -73,7 +73,7 @@ export default function FAQ() {
   ];
 
   return (
-    <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24 bg-gradient-to-b from-gray-50 to-white">
+    <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24 bg-gray-100">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <div className="inline-block px-4 py-2 bg-gold/20 border border-gold/30 rounded-full mb-4 text-sm font-semibold text-charcoal shadow-sm">

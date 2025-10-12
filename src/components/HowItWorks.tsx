@@ -38,7 +38,7 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section id="how-it-works" className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24 bg-white">
+    <section id="how-it-works" className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24 bg-gray-200">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 lg:mb-20">
           <div className="inline-block px-4 py-2 bg-gold/20 border border-gold/30 rounded-full mb-4 text-sm font-semibold text-charcoal shadow-sm">
@@ -56,7 +56,7 @@ export default function HowItWorks() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mb-16">
           {steps.map((step, index) => (
             <div key={index} className="relative">
-              <div className="bg-gradient-main p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 h-full border-2 border-gold/20 hover:border-gold">
+              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 h-full border border-gray-200 hover:border-gold">
                 <div className="flex items-start justify-between mb-6">
                   <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-gold to-yellow-500 flex items-center justify-center shadow-lg">
                     <step.icon className="w-8 h-8 text-white" strokeWidth={2} />
