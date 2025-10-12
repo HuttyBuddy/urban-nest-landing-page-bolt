@@ -9,6 +9,9 @@ export default {
       colors: {
         'gold': '#FFD700',
         'charcoal': '#36454F',
+      },
+      backgroundImage: {
+        'gradient-main': 'linear-gradient(to bottom right, #f9fafb, #ffffff)',
       }
     },
   },
