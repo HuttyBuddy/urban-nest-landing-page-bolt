@@ -103,7 +103,7 @@ export default function Features() {
                   <p className="text-gray-600 leading-relaxed mb-4 text-sm">
                     {feature.description}
                   </p>
-                  <div className="flex items-start gap-2 text-xs font-semibold text-gold bg-gold/20 border border-gold/30 p-3 rounded-lg shadow-sm">
+                  <div className="flex items-start gap-2 text-xs font-semibold text-gold bg-charcoal/90 border border-charcoal p-3 rounded-lg shadow-sm">
                     <CheckCircle className="w-4 h-4 flex-shrink-0 mt-0.5" />
                     <span>{feature.benefit}</span>
                   </div>
