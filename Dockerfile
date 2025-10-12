@@ -1,27 +1,17 @@
 # --- Build stage ---
-# This stage installs all dependencies and builds your static assets
-FROM node:20 AS build
+FROM node:20-alpine AS build
 WORKDIR /app
 COPY package*.json ./
 RUN npm ci
 COPY . .
-RUN npm run build
+RUN npm run build  # -> /app/dist
 
-# --- Run stage ---
-# This stage prepares the final, lightweight production container
-FROM node:20-alpine
-WORKDIR /app
-
-# Copy the files needed to run the production server
-COPY --from=build /app/package*.json ./
-COPY --from=build /app/dist ./dist
-
-# Install only the dependencies needed for production (like Vite)
-RUN npm ci --omit=dev
-
-# Set the port Cloud Run provides
+# --- Run stage (Nginx) ---
+FROM nginx:alpine
+# Cloud Run expects the container to listen on 8080
+RUN sed -i 's/listen\s\+80;/listen 8080;/' /etc/nginx/conf.d/default.conf
+# SPA fallback so deep links work
+RUN sed -i 's|try_files .*;|try_files $uri /index.html;|' /etc/nginx/conf.d/default.conf || true
+COPY --from=build /app/dist /usr/share/nginx/html
 ENV PORT=8080
 EXPOSE 8080
-
-# Run the start script which binds to the provided PORT
-CMD ["npm", "run", "start"]
