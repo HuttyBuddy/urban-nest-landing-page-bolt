@@ -28,11 +28,20 @@ export default function EarlyAccessForm() {
 
   return (
     <section id="early-access" className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24 bg-gradient-dark relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 via-transparent to-amber-500/10 pointer-events-none"></div>
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl"></div>
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 -z-10 bg-gradient-to-br from-amber-500/10 via-transparent to-amber-500/10"
+      ></div>
+      <div
+        aria-hidden="true"
+        className="absolute top-0 left-1/4 w-96 h-96 -z-10 bg-amber-500/20 rounded-full blur-3xl"
+      ></div>
+      <div
+        aria-hidden="true"
+        className="absolute bottom-0 right-1/4 w-96 h-96 -z-10 bg-amber-500/20 rounded-full blur-3xl"
+      ></div>
 
-      <div className="max-w-3xl mx-auto relative">
+      <div className="max-w-3xl mx-auto relative z-10">
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500 border-2 border-amber-600 rounded-full mb-6 text-sm font-bold text-white shadow-lg animate-pulse">
             <Gift className="w-4 h-4" />
