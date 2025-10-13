@@ -41,7 +41,7 @@ export default function Header() {
             href="#early-access"
             className="rounded-lg border-2 border-amber-500 px-5 py-2 text-sm font-bold text-amber-600 transition-all duration-200 hover:bg-amber-500 hover:text-white"
           >
-            Join the Beta
+            Claim Early Access
           </a>
         </div>
 
@@ -73,7 +73,7 @@ export default function Header() {
               className="rounded-lg bg-gradient-cta px-3 py-2 text-center text-sm font-bold text-white shadow-md transition-opacity duration-200 hover:opacity-90"
               onClick={() => setOpen(false)}
             >
-              Join the Beta
+              Claim Early Access
             </a>
           </div>
         </nav>
