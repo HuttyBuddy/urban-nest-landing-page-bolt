@@ -6,12 +6,13 @@ RUN npm ci
 COPY . .
 RUN npm run build  # -> /app/dist
 
-# --- Run stage (Nginx) ---
+# ...same build stage...
+
 FROM nginx:alpine
-# Cloud Run expects the container to listen on 8080
+# listen on Cloud Run port
 RUN sed -i 's/listen\s\+80;/listen 8080;/' /etc/nginx/conf.d/default.conf
-# SPA fallback so deep links work
-RUN sed -i 's|try_files .*;|try_files $uri /index.html;|' /etc/nginx/conf.d/default.conf || true
+# ✅ proper SPA fallback: serve real files if they exist, else index.html
+RUN sed -i 's|try_files .*;|try_files $uri $uri/ /index.html;|' /etc/nginx/conf.d/default.conf || true
 COPY --from=build /app/dist /usr/share/nginx/html
 ENV PORT=8080
 EXPOSE 8080
