@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import Header from './components/Header';
 import Hero from './components/Hero';
 import Features from './components/Features';
 import SocialProof from './components/SocialProof';
@@ -15,7 +16,8 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-main">
+    <div className="bg-white text-gray-900">
+      <Header />
       <Hero onGetStarted={scrollToForm} />
       <Features />
       <SocialProof />
