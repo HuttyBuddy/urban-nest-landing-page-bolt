@@ -1,13 +1,21 @@
-# --- Build stage ---
-FROM node:20-alpine AS build
+# --- Build stage: Vite ---
+FROM node:18-alpine AS build
 WORKDIR /app
 COPY package*.json ./
-RUN npm install
+RUN npm ci
 COPY . .
-RUN npm run build   # builds to /app/dist
+RUN npm run build
 
-# --- Run stage (Nginx for Cloud Run) ---
-FROM nginx:alpine
+# --- Runtime: Nginx serving the built SPA ---
+FROM nginx:1.25-alpine
+# Template lets us inject $PORT at runtime (Cloud Run)
+COPY nginx.conf.template /etc/nginx/templates/default.conf.template
+# Built files from Vite
 COPY --from=build /app/dist /usr/share/nginx/html
+
+# Cloud Run listens on $PORT
 ENV PORT=8080
 EXPOSE 8080
+
+# Render template → start Nginx
+CMD sh -c 'envsubst < /etc/nginx/templates/default.conf.template > /etc/nginx/conf.d/default.conf && exec nginx -g "daemon off;"'
