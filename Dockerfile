@@ -8,6 +8,8 @@ RUN npm run build
 
 # --- Runtime: Nginx serving the built SPA ---
 FROM nginx:1.25-alpine
+# Install envsubst for runtime templating of the Nginx config
+RUN apk add --no-cache gettext
 # Template lets us inject $PORT at runtime (Cloud Run)
 COPY nginx.conf.template /etc/nginx/templates/default.conf.template
 # Built files from Vite
