@@ -1,5 +1,3 @@
-cp Dockerfile Dockerfile.bak || true
-
 cat > Dockerfile <<'EOF'
 # --- Build stage: Vite ---
 FROM node:18-alpine AS build
