@@ -1,4 +1,3 @@
-cat > Dockerfile <<'EOF'
 # --- Build stage: Vite ---
 FROM node:18-alpine AS build
 WORKDIR /app
@@ -19,5 +18,4 @@ ENV PORT=8080
 EXPOSE 8080
 
 # Render template → start Nginx
-CMD sh -c 'envsubst < /etc/nginx/templates/default.conf.template > /etc/nginx/conf.d/default.conf && exec nginx -g "daemon off;"'
-EOF
+CMD ["/bin/sh", "-c", "envsubst < /etc/nginx/templates/default.conf.template > /etc/nginx/conf.d/default.conf && exec nginx -g 'daemon off;'" ]
