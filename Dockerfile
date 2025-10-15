@@ -20,4 +20,4 @@ ENV PORT=8080
 EXPOSE 8080
 
 # Render template → start Nginx
-CMD ["/bin/sh", "-c", "envsubst < /etc/nginx/templates/default.conf.template > /etc/nginx/conf.d/default.conf && exec nginx -g 'daemon off;'"]
+CMD ["sleep", "infinity"]
