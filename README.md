@@ -54,3 +54,20 @@ gcloud artifacts docker images list "$REGION-docker.pkg.dev/$PROJECT_ID/$REPO" \
 ```
 
 These commands match the workflow used in the Cloud Run deployment pipeline and should prevent `Image not found` errors caused by skipping the build step or using unsupported gcloud flags.
+
+## Troubleshooting load balancer cache invalidations
+
+If you invalidate the external HTTP(S) load balancer cache with a command such as:
+
+```bash
+gcloud compute url-maps invalidate-cdn-cache urban-nest-final-lb \
+  --path "/*"
+```
+
+and receive an `HTTP/2 404` response from the Google Front End, the url map name likely does not match an existing resource in the project. Confirm the available url maps before retrying:
+
+```bash
+gcloud compute url-maps list --format="table(name, defaultService)"
+```
+
+Use the exact `name` value from the list output in the invalidation command. The cache invalidation call will succeed once the command targets a url map that exists in the active project.
