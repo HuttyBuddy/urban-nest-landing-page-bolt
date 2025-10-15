@@ -22,18 +22,7 @@ export default function Hero({ onGetStarted }: HeroProps) {
 
   return (
     <section className="relative px-4 pt-8 pb-16 sm:px-6 lg:px-8 lg:pt-16 lg:pb-24 overflow-hidden bg-white">
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover"
-        aria-hidden="true"
-      >
-        <source src="/Hero Video 2.mp4" type="video/mp4" />
-      </video>
-
-      <div className="absolute inset-0 bg-gradient-to-br from-amber-50/90 via-white/85 to-orange-50/90 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-amber-50 via-white to-orange-50 pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto relative">
         <div className="flex justify-center mb-8 lg:mb-12">
