@@ -18,50 +18,20 @@ export default {
   theme: {
     extend: {
       colors: {
-        gold: {
-          DEFAULT: '#D4A842',
-          50: '#FDF9EF',
-          100: '#F9F0D9',
-          200: '#F0E0B0',
-          300: '#E7CF87',
-          400: '#E0B855',
-          500: '#D4A842',
-          600: '#C89830',
-          700: '#A87D1A',
-          800: '#7D5E14',
-          900: '#523F0D'
-        },
-        cream: {
-          DEFAULT: '#FAF8F5',
-          50: '#FFFFFF',
-          100: '#F7F3ED',
-          200: '#F0EBE0',
-          300: '#E4DCC9',
-          400: '#D8CDB4'
-        },
-        navy: {
-          DEFAULT: '#1E2F42',
-          50: '#E8EAED',
-          100: '#D1D6DB',
-          200: '#9BA7B4',
-          300: '#667A8C',
-          400: '#3A4E62',
-          500: '#1E2F42',
-          600: '#1A2633',
-          700: '#141E2A',
-          800: '#0F161F',
-          900: '#090D13'
-        },
+        gold: '#F59E0B',
+        amber: { 400:'#FBBF24', 500:'#F59E0B', 600:'#D97706', 700:'#B45309' },
+        orange:{ 500:'#F97316', 600:'#EA580C' },
         charcoal:{ DEFAULT:'#1F2937', 800:'#1F2937', 900:'#111827' },
+        slate:{ 900:'#0F172A', 950:'#020617' },
       },
       backgroundImage: {
-        'gradient-main': 'linear-gradient(to bottom right, #FFFFFF, #FAF8F5)',
-        'gradient-dark': 'linear-gradient(135deg, #2C3E50 0%, #1B2530 100%)',
-        'gradient-cta':  'linear-gradient(135deg, #D4A842 0%, #C89830 100%)',
+        'gradient-main': 'linear-gradient(to bottom right,#ffffff,#f9fafb)',
+        'gradient-dark': 'linear-gradient(135deg,#0F172A 0%,#1F2937 100%)',
+        'gradient-cta':  'linear-gradient(135deg,#F59E0B 0%,#F97316 100%)',
       },
       boxShadow: {
-        bold: '0 10px 40px -10px rgba(0,0,0,.15)',
-        bolder: '0 20px 60px -15px rgba(0,0,0,.25)',
+        bold: '0 10px 40px -10px rgba(0,0,0,.4)',
+        bolder: '0 20px 60px -15px rgba(0,0,0,.5)',
       },
     },
   },
