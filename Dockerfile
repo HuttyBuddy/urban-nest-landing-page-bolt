@@ -28,8 +28,7 @@ RUN apk add --no-cache gettext
 COPY nginx.conf.template /etc/nginx/templates/default.conf.template
 
 # Built files from Vite
-COPY --from=build /app/dist /usr/share/nginx/html
-
+COPY --from=builder /app/dist /usr/share/nginx/html
 # Cloud Run listens on $PORT
 ENV PORT 8080
 
