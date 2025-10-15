@@ -34,4 +34,4 @@ ENV PORT 8080
 
 # This is the correct command to start the server.
 # It processes the Nginx config and then starts the Nginx server.
-CMD ["/bin/sh", "-c", "envsubst '$PORT' < /etc/nginx/templates/default.conf.template > /etc/nginx/conf.d/default.conf && exec nginx -g 'daemon off;'" ]
+CMD /bin/sh -c "envsubst < /etc/nginx/templates/default.conf.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
