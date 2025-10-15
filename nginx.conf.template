@@ -20,6 +20,6 @@ server {
 
     # Ensure index isn't cached by browsers/CDNs.
     location = /index.html {
-        add_header Cache-Control "no-cache";
+        add_header Cache-Control "no-store, max-age=0, must-revalidate";
     }
 }
