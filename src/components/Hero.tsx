@@ -34,8 +34,8 @@ export default function Hero({ onGetStarted }: HeroProps) {
       </video>
 
       {/* Double-layer overlay for improved text readability */}
-      <div className="absolute inset-0 bg-white/92 pointer-events-none"></div>
-      <div className="absolute inset-0 bg-gradient-to-br from-white/98 via-cream-50/96 to-white/97 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-white/80 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-cream-50/75 to-white/80 pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto relative">
         <div className="flex justify-center mb-8 lg:mb-12">
