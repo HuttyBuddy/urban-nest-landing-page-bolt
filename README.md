@@ -105,3 +105,13 @@ targets a domain mapping that was deleted or never finished verifying.
 
 After the domain mapping reports a `Ready` status, re-run the deployment and
 the service will route traffic successfully.
+
+## Capturing startup errors on Cloud Run
+
+When the service deploys successfully but the revision crashes during the
+startup health check, follow the playbook in
+[`docs/cloud-run-startup-debugging.md`](docs/cloud-run-startup-debugging.md).
+It summarizes the confirmed working pieces of the pipeline and provides
+commands for streaming container logs, running the production image locally,
+and inspecting revision metadata so a freelancer can isolate the failing code
+path quickly.
