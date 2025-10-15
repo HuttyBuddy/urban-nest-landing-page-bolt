@@ -71,3 +71,37 @@ gcloud compute url-maps list --format="table(name, defaultService)"
 ```
 
 Use the exact `name` value from the list output in the invalidation command. The cache invalidation call will succeed once the command targets a url map that exists in the active project.
+
+## Troubleshooting Cloud Run domain mapping errors
+
+If a Cloud Run deployment fails with an error similar to
+`Domain mapping <DOMAIN> is not ready or routing` the custom domain entry
+referenced by the service is either missing or stuck in a pending state.
+This typically happens when the external Application Load Balancer still
+targets a domain mapping that was deleted or never finished verifying.
+
+1. Check the current domain mapping status:
+
+   ```bash
+   gcloud beta run domain-mappings list \
+     --region "$REGION" \
+     --platform managed
+   ```
+
+2. If the mapping does not exist, remove the stale load balancer reference
+   from the service (UI: **Cloud Run → Edit and deploy new revision → Ingress →
+   Uncheck "Custom domains"**). Alternatively, delete the custom domain entry
+   from the external HTTP(S) load balancer configuration.
+
+3. If the mapping exists but is not ready, re-verify the domain ownership and
+   ensure the required DNS records point to the Cloud Run load balancer. You
+   can also delete and recreate the mapping once DNS is correct:
+
+   ```bash
+   gcloud beta run domain-mappings delete --domain <DOMAIN> --region "$REGION"
+   gcloud beta run domain-mappings create --service "$SERVICE" --domain <DOMAIN> \
+     --region "$REGION"
+   ```
+
+After the domain mapping reports a `Ready` status, re-run the deployment and
+the service will route traffic successfully.
