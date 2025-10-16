@@ -27,7 +27,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           <button
             onClick={scrollToTop}
-            className="flex items-center transition-transform hover:scale-105 focus:outline-none flex-shrink-0"
+            className="flex items-center gap-3 transition-transform hover:scale-105 focus:outline-none flex-shrink-0"
             aria-label="Urban Nest Home"
           >
             <img
@@ -36,6 +36,10 @@ export default function Header() {
               className="h-10 sm:h-12 lg:h-14 w-auto object-contain"
               loading="eager"
             />
+            <div className="flex items-baseline text-2xl sm:text-3xl lg:text-4xl font-bold leading-none">
+              <span className="text-gray-700">Urban</span>
+              <span className="text-amber-500">Nest</span>
+            </div>
           </button>
 
           <nav className="hidden md:flex items-center gap-8">
