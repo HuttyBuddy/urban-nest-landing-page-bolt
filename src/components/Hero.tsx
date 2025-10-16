@@ -39,12 +39,12 @@ export default function Hero({ onGetStarted }: HeroProps) {
             <span>Join 500+ Agents Transforming Their Marketing</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-gray-900 mb-6 lg:mb-8 leading-tight">
-            Spend Less Time Creating Content,
-            <span className="block mt-2 bg-gradient-cta bg-clip-text text-transparent">
-              More Time Closing Deals
-            </span>
-          </h1>
+<h1 className="text-4xl ...">
+  Win Your Farm.
+  <span className="block mt-2 bg-gradient-cta bg-clip-text text-transparent">
+    In 5 Minutes a Week.
+  </span>
+</h1>
 
           <div className="h-16 sm:h-20 mb-8 lg:mb-10 flex items-center justify-center">
             <p className="text-xl sm:text-2xl lg:text-3xl text-gray-900 font-bold leading-relaxed transition-all duration-500 animate-fade-in">
@@ -61,7 +61,7 @@ export default function Hero({ onGetStarted }: HeroProps) {
               onClick={onGetStarted}
               className="group w-full sm:w-auto bg-gradient-cta hover:opacity-90 text-white font-bold px-8 py-4 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 shadow-bolder hover:shadow-bolder transform hover:-translate-y-1 hover:scale-105 text-lg"
             >
-              Claim Your Early Access Spot
+              Claim Your Spot in the Private Beta
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
             <button
