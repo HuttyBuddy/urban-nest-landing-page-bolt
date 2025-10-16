@@ -59,52 +59,52 @@ export default function Features() {
   ];
 
   return (
-    <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24 bg-gray-50">
+    <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24 bg-gray-200">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 lg:mb-20">
-          <div className="inline-block px-4 py-2 bg-amber-500 border-2 border-amber-600 rounded-full mb-4 text-sm font-bold text-white shadow-md">
+          <div className="inline-block px-4 py-2 bg-gold/20 border border-gold/30 rounded-full mb-4 text-sm font-semibold text-charcoal shadow-sm">
             The Urban Nest Difference
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal mb-6">
             Not Just Another AI Tool.
             <span className="block mt-2">Your Personal Marketing Team.</span>
           </h2>
-          <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            While other agents waste hours creating content or settle for generic AI that sounds robotic, you'll have a complete marketing ecosystem with <span className="font-bold text-gray-900">hyper-local intelligence</span>, <span className="font-bold text-gray-900">Google AI power</span>, <span className="font-bold text-gray-900">brand customization</span>, <span className="font-bold text-gray-900">CRM integration</span>, <span className="font-bold text-gray-900">listing automation</span>, and <span className="font-bold text-gray-900">digital avatars</span>.
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            While other agents waste hours creating content or settle for generic AI that sounds robotic, you'll have a complete marketing ecosystem with <span className="font-semibold text-charcoal">hyper-local intelligence</span>, <span className="font-semibold text-charcoal">Google AI power</span>, <span className="font-semibold text-charcoal">brand customization</span>, <span className="font-semibold text-charcoal">CRM integration</span>, <span className="font-semibold text-charcoal">listing automation</span>, and <span className="font-semibold text-charcoal">digital avatars</span>.
           </p>
         </div>
 
         <div className="mb-20 lg:mb-28">
-          <h3 className="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-4 text-center">
+          <h3 className="text-2xl sm:text-3xl font-bold text-charcoal mb-4 text-center">
             Powerful AI Features That Transform Your Marketing
           </h3>
-          <p className="text-center text-gray-700 mb-12 max-w-2xl mx-auto font-medium">
+          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
             A complete marketing ecosystem designed specifically for real estate professionals
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {coreFeatures.map((feature, index) => (
               <div
                 key={index}
-                className="bg-white p-8 rounded-2xl shadow-bold hover:shadow-bolder transition-all duration-300 transform hover:-translate-y-2 border-2 border-gray-200 hover:border-amber-500 relative overflow-hidden group"
+                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200 hover:border-gold relative overflow-hidden group"
               >
-                <div className="absolute top-0 right-0 w-32 h-32 bg-amber-50 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500"></div>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gold/5 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500"></div>
                 <div className="relative">
                   <div className="flex items-start justify-between mb-4">
-                    <div className="w-14 h-14 rounded-xl bg-amber-500 border-2 border-amber-600 shadow-md flex items-center justify-center group-hover:bg-amber-600 transition-all">
-                      <feature.icon className="w-7 h-7 text-white" strokeWidth={2.5} />
+                    <div className="w-14 h-14 rounded-xl bg-gold/50 border-2 border-gold/60 shadow-md flex items-center justify-center group-hover:bg-gold/70 group-hover:border-gold transition-all">
+                      <feature.icon className="w-7 h-7 text-charcoal" strokeWidth={2} />
                     </div>
-                    <div className="w-6 h-6 bg-gray-900 rounded-full flex items-center justify-center text-white font-bold text-xs">
+                    <div className="w-6 h-6 bg-charcoal rounded-full flex items-center justify-center text-white font-bold text-xs">
                       {index + 1}
                     </div>
                   </div>
-                  <h4 className="text-xl font-extrabold text-gray-900 mb-3">
+                  <h4 className="text-xl font-bold text-charcoal mb-3">
                     {feature.title}
                   </h4>
-                  <p className="text-gray-700 leading-relaxed mb-4 text-sm font-medium">
+                  <p className="text-gray-600 leading-relaxed mb-4 text-sm">
                     {feature.description}
                   </p>
-                  <div className="flex items-start gap-2 text-xs font-bold text-white bg-gray-900 border-2 border-gray-900 p-3 rounded-lg shadow-sm">
-                    <CheckCircle className="w-4 h-4 flex-shrink-0 mt-0.5 text-amber-400" />
+                  <div className="flex items-start gap-2 text-xs font-semibold text-gold bg-gold/20 border border-gold/30 p-3 rounded-lg shadow-sm">
+                    <CheckCircle className="w-4 h-4 flex-shrink-0 mt-0.5" />
                     <span>{feature.benefit}</span>
                   </div>
                 </div>
@@ -112,38 +112,38 @@ export default function Features() {
             ))}
           </div>
           <div className="mt-12 text-center">
-            <div className="inline-flex items-center gap-2 text-gray-900 font-bold bg-amber-100 border-2 border-amber-500 px-6 py-3 rounded-lg shadow-md">
-              <Sparkles className="w-5 h-5 text-amber-600" />
+            <div className="inline-flex items-center gap-2 text-charcoal font-semibold bg-gold/20 border border-gold/30 px-6 py-3 rounded-lg shadow-sm">
+              <Sparkles className="w-5 h-5 text-gold drop-shadow-sm" />
               <span>All features work together seamlessly to 10x your marketing efficiency</span>
             </div>
           </div>
         </div>
 
         <div>
-          <h3 className="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-4 text-center">
+          <h3 className="text-2xl sm:text-3xl font-bold text-charcoal mb-4 text-center">
             Every Type of Content You Need to Dominate Your Market
           </h3>
-          <p className="text-center text-gray-700 mb-12 max-w-2xl mx-auto font-medium">
+          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
             Stop juggling multiple tools. Create everything from one powerful platform.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {contentTypes.map((item, index) => (
               <div
                 key={index}
-                className="bg-white p-8 rounded-2xl shadow-bold hover:shadow-bolder transition-all duration-300 transform hover:-translate-y-2 border-2 border-gray-200 hover:border-amber-500 relative overflow-hidden group"
+                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200 hover:border-gold relative overflow-hidden group"
               >
-                <div className="absolute top-0 right-0 w-32 h-32 bg-amber-50 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500"></div>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gold/5 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500"></div>
                 <div className="relative">
-                  <div className="w-14 h-14 rounded-xl bg-amber-500 border-2 border-amber-600 shadow-md flex items-center justify-center mb-6 group-hover:bg-amber-600 transition-all">
-                    <item.icon className="w-7 h-7 text-white" strokeWidth={2.5} />
+                  <div className="w-14 h-14 rounded-xl bg-gold/50 border-2 border-gold/60 shadow-md flex items-center justify-center mb-6 group-hover:bg-gold/70 group-hover:border-gold transition-all">
+                    <item.icon className="w-7 h-7 text-charcoal" strokeWidth={2} />
                   </div>
-                  <h4 className="text-xl font-extrabold text-gray-900 mb-4">
+                  <h4 className="text-xl font-bold text-charcoal mb-4">
                     {item.title}
                   </h4>
-                  <p className="text-gray-700 leading-relaxed mb-6 font-medium">
+                  <p className="text-gray-600 leading-relaxed mb-6">
                     {item.description}
                   </p>
-                  <div className="flex items-center gap-2 text-sm font-bold text-amber-600">
+                  <div className="flex items-center gap-2 text-sm font-semibold text-gold">
                     <CheckCircle className="w-4 h-4" />
                     <span>Ready in seconds</span>
                   </div>
