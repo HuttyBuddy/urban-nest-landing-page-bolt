@@ -24,4 +24,4 @@ ENV PORT=8080
 EXPOSE 8080
 
 # Run the correct start command from your package.json ("vite preview")
-CMD ["node", "node_modules/vite/bin/vite.js", "preview", "--host", "0.0.0.0"]
+CMD ["npm", "start"]

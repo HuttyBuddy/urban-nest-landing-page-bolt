@@ -21,8 +21,8 @@ export default function Hero({ onGetStarted }: HeroProps) {
   }, []);
 
   return (
-    <section className="relative px-4 pt-8 pb-16 sm:px-6 lg:px-8 lg:pt-16 lg:pb-24 overflow-hidden bg-gray-100">
-      <div className="absolute inset-0 bg-gradient-to-br from-gold/10 via-gray-100 to-charcoal/10 pointer-events-none"></div>
+    <section className="relative px-4 pt-8 pb-16 sm:px-6 lg:px-8 lg:pt-16 lg:pb-24 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-charcoal/5 pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto relative">
         <div className="flex justify-center mb-8 lg:mb-12">
