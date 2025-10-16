@@ -32,17 +32,21 @@
     <meta property="twitter:image" content="/Urban Nest Logo Large.png" />
   </head>
   <body>
-    <video autoplay loop muted playsinline class="hero-video-bg">
-      <source src="/hero-video.mp4" type="video/mp4">
-    </video>
-    <div class="hero-overlay"></div>
-
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
     <script>
-      // ... your existing service worker script ...
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registered:', registration);
+            })
+            .catch((error) => {
+              console.log('SW registration failed:', error);
+            });
+        });
+      }
     </script>
   </body>
 </html>
-
 
