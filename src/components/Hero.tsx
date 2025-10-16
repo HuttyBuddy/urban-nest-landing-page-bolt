@@ -27,9 +27,10 @@ export default function Hero({ onGetStarted }: HeroProps) {
       <div className="max-w-7xl mx-auto relative">
         <div className="flex justify-center mb-8 lg:mb-12">
           <img
-            src="/Urban Nest Logo Large.png"
+            src="/urban-nest-logo.png"
             alt="Urban Nest"
-            className="h-20 w-auto sm:h-24 lg:h-32 animate-fade-in"
+            className="h-20 w-auto sm:h-24 lg:h-32 animate-fade-in object-contain"
+            loading="eager"
           />
         </div>
 
