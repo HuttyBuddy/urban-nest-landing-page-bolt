@@ -1,0 +1,35 @@
+server {
+    listen       ${PORT};
+    listen       [::]:${PORT};
+    server_name  _;
+
+    root   /usr/share/nginx/html;
+    index  index.html;
+
+    # Serve static assets with aggressive caching.
+    location ^~ /assets/ {
+        add_header Cache-Control "public, max-age=31536000, immutable" always;
+        add_header X-SPA-Assets "true";
+        try_files $uri =404;
+    }
+
+ # Ensure the SPA shell is never cached.
+    location = /index.html {
+        add_header Cache-Control "no-store, max-age=0, must-revalidate" always;
+        try_files $uri =404;
+    }
+
+    # Cloud Run's external load balancer sometimes normalizes /index.html → /index.
+    # Serve the same SPA shell for that path so curl -I /index.html no longer
+    # resolves through a redirect.
+    location = /index {
+        add_header Cache-Control "no-store, max-age=0, must-revalidate" always;
+        try_files /index.html =404;
+    }
+
+
+    # SPA fallback.
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+}

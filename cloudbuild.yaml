@@ -26,3 +26,6 @@ images:
 
 options:
   logging: CLOUD_LOGGING_ONLY
+
+# This required line specifies which service account the build will use
+serviceAccount: 'cloud-build-runner@urban-nest-2.iam.gserviceaccount.com'

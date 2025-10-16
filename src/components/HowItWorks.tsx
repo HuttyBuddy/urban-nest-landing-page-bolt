@@ -38,17 +38,17 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section id="how-it-works" className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24 bg-white">
+    <section id="how-it-works" className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 lg:mb-20">
-          <div className="inline-block px-4 py-2 bg-gold/20 border border-gold/30 rounded-full mb-4 text-sm font-semibold text-charcoal shadow-sm">
+          <div className="inline-block px-4 py-2 bg-amber-500 border-2 border-amber-600 rounded-full mb-4 text-sm font-bold text-white shadow-md">
             Simple 3-Step Process
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6">
             From Setup to Published Content
             <span className="block mt-2">in Under 10 Minutes</span>
           </h2>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
             No technical skills required. Powerful AI features working together seamlessly. Just results.
           </p>
         </div>
@@ -56,32 +56,32 @@ export default function HowItWorks() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mb-16">
           {steps.map((step, index) => (
             <div key={index} className="relative">
-              <div className="bg-gradient-main p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 h-full border-2 border-gold/20 hover:border-gold">
+              <div className="bg-white p-8 rounded-2xl shadow-bold hover:shadow-bolder transition-all duration-300 transform hover:-translate-y-2 h-full border-2 border-gray-200 hover:border-amber-500">
                 <div className="flex items-start justify-between mb-6">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-gold to-yellow-500 flex items-center justify-center shadow-lg">
-                    <step.icon className="w-8 h-8 text-white" strokeWidth={2} />
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-cta flex items-center justify-center shadow-lg">
+                    <step.icon className="w-8 h-8 text-white" strokeWidth={2.5} />
                   </div>
-                  <div className="text-xs font-bold text-white bg-charcoal px-3 py-1 rounded-full">
+                  <div className="text-xs font-bold text-white bg-gray-900 px-3 py-1 rounded-full">
                     {step.time}
                   </div>
                 </div>
 
                 <div className="mb-4">
-                  <div className="text-sm font-bold text-gold drop-shadow-sm mb-2">
+                  <div className="text-sm font-bold text-amber-600 mb-2">
                     STEP {index + 1}
                   </div>
-                  <h3 className="text-2xl font-bold text-charcoal mb-3">
+                  <h3 className="text-2xl font-extrabold text-gray-900 mb-3">
                     {step.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed mb-6">
+                  <p className="text-gray-700 leading-relaxed mb-6 font-medium">
                     {step.description}
                   </p>
                 </div>
 
                 <ul className="space-y-3">
                   {step.details.map((detail, detailIndex) => (
-                    <li key={detailIndex} className="flex items-center gap-3 text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 text-gold drop-shadow-sm flex-shrink-0" />
+                    <li key={detailIndex} className="flex items-center gap-3 text-sm text-gray-700 font-medium">
+                      <CheckCircle className="w-4 h-4 text-amber-600 flex-shrink-0" />
                       <span>{detail}</span>
                     </li>
                   ))}
@@ -89,27 +89,27 @@ export default function HowItWorks() {
               </div>
 
               {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-1/2 -right-6 lg:-right-12 w-12 lg:w-24 h-0.5 bg-gradient-to-r from-gold to-transparent -translate-y-1/2"></div>
+                <div className="hidden md:block absolute top-1/2 -right-6 lg:-right-12 w-12 lg:w-24 h-0.5 bg-gradient-to-r from-amber-500 to-transparent -translate-y-1/2"></div>
               )}
             </div>
           ))}
         </div>
 
-        <div className="bg-gradient-to-br from-charcoal to-gray-800 rounded-3xl p-8 sm:p-12 text-center text-white shadow-2xl">
-          <h3 className="text-2xl sm:text-3xl font-bold mb-4">
+        <div className="bg-gradient-dark rounded-3xl p-8 sm:p-12 text-center text-white shadow-bolder border-2 border-amber-500">
+          <h3 className="text-2xl sm:text-3xl font-extrabold mb-4">
             Ready to Transform Your Marketing?
           </h3>
-          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto font-medium">
             Don't waste another minute on content creation. Unlock hyper-local content, Google AI power, brand customization, CRM integration, listing automation, and your digital avatar today.
           </p>
           <button
             onClick={() => document.querySelector('#early-access')?.scrollIntoView({ behavior: 'smooth' })}
-            className="inline-flex items-center gap-2 bg-gold hover:bg-opacity-90 text-charcoal font-semibold px-8 py-4 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+            className="inline-flex items-center gap-2 bg-gradient-cta hover:opacity-90 text-white font-bold px-8 py-4 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-lg"
           >
             Get Early Access Now
             <Rocket className="w-5 h-5" />
           </button>
-          <p className="mt-4 text-sm text-gray-400">
+          <p className="mt-4 text-sm text-gray-400 font-medium">
             Early adopters lock in exclusive launch pricing forever
           </p>
         </div>

@@ -1,27 +1,37 @@
-# --- Build stage ---
-# This stage installs all dependencies and builds your static assets
-FROM node:20 AS build
+# ---- Stage 1: Build ----
+# Use an official Node.js LTS (Long Term Support) version as a parent image
+FROM node:20-alpine as builder
+
+# Set the working directory in the container
 WORKDIR /app
+
+# Copy package.json and package-lock.json (or yarn.lock, etc.) first
 COPY package*.json ./
-RUN npm ci
+
+# Use npm install for robustness
+RUN npm install
+
+# Copy the rest of your application's source code
 COPY . .
+
+# Build the React application for production
 RUN npm run build
 
-# --- Run stage ---
-# This stage prepares the final, lightweight production container
-FROM node:20-alpine
-WORKDIR /app
+# ---- Stage 2: Serve ----
+# Use a lightweight, production-ready Nginx image.
+FROM nginx:stable-alpine
 
-# Copy the files needed to run the production server
-COPY --from=build /app/package*.json ./
-COPY --from=build /app/dist ./dist
+# Install envsubst for runtime templating of the Nginx config
+RUN apk add --no-cache gettext
 
-# Install only the dependencies needed for production (like Vite)
-RUN npm ci --omit=dev
+# Template lets us inject $PORT at runtime (Cloud Run)
+COPY nginx.conf.template /etc/nginx/templates/default.conf.template
 
-# Set the port Cloud Run provides
-ENV PORT=8080
-EXPOSE 8080
+# Built files from Vite
+COPY --from=builder /app/dist /usr/share/nginx/html
+# Cloud Run listens on $PORT
+ENV PORT 8080
 
-# Run the correct start command from your package.json ("vite preview")
-CMD ["npm", "start"]
+# This is the correct command to start the server.
+# It processes the Nginx config and then starts the Nginx server.
+CMD ["/bin/sh", "-c", "envsubst '$PORT' < /etc/nginx/templates/default.conf.template > /etc/nginx/conf.d/default.conf && exec nginx -g 'daemon off;'" ]

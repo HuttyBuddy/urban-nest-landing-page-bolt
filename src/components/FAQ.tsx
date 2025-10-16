@@ -73,16 +73,16 @@ export default function FAQ() {
   ];
 
   return (
-    <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24 bg-gradient-to-b from-gray-50 to-white">
+    <section id="faq" className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24 bg-white">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
-          <div className="inline-block px-4 py-2 bg-gold/20 border border-gold/30 rounded-full mb-4 text-sm font-semibold text-charcoal shadow-sm">
+          <div className="inline-block px-4 py-2 bg-amber-500 border-2 border-amber-600 rounded-full mb-4 text-sm font-bold text-white shadow-md">
             Questions & Answers
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6">
             Everything You Need to Know
           </h2>
-          <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
+          <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
             Have a question that's not answered here? Reach out through the early access form.
           </p>
         </div>
@@ -91,22 +91,22 @@ export default function FAQ() {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 overflow-hidden"
+              className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 border-2 border-gray-200 overflow-hidden"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 className="w-full px-6 py-6 flex items-start gap-4 text-left hover:bg-gray-50 transition-colors"
               >
-                <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-gold/30 border border-gold/40 shadow-sm flex items-center justify-center">
-                  <faq.icon className="w-5 h-5 text-charcoal" />
+                <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-amber-500 border-2 border-amber-600 shadow-sm flex items-center justify-center">
+                  <faq.icon className="w-5 h-5 text-white" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h3 className="text-lg font-bold text-charcoal mb-1 pr-8">
+                  <h3 className="text-lg font-extrabold text-gray-900 mb-1 pr-8">
                     {faq.question}
                   </h3>
                 </div>
                 <ChevronDown
-                  className={`flex-shrink-0 w-6 h-6 text-gray-400 transition-transform duration-300 ${
+                  className={`flex-shrink-0 w-6 h-6 text-gray-600 transition-transform duration-300 ${
                     openIndex === index ? 'transform rotate-180' : ''
                   }`}
                 />
@@ -120,7 +120,7 @@ export default function FAQ() {
                 }`}
               >
                 <div className="px-6 pb-6 pl-20">
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-700 leading-relaxed font-medium">
                     {faq.answer}
                   </p>
                 </div>
@@ -130,12 +130,12 @@ export default function FAQ() {
         </div>
 
         <div className="mt-12 text-center">
-          <p className="text-gray-600 mb-4">
+          <p className="text-gray-700 mb-4 font-medium">
             Still have questions?
           </p>
           <button
             onClick={() => document.querySelector('#early-access')?.scrollIntoView({ behavior: 'smooth' })}
-            className="text-gold font-semibold hover:text-yellow-600 transition-colors"
+            className="text-amber-600 font-bold hover:text-amber-700 transition-colors text-lg"
           >
             Get in touch through the early access form
           </button>
