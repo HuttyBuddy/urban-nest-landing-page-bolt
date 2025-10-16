@@ -59,7 +59,7 @@ export default function Features() {
   ];
 
   return (
-    <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24 bg-gray-50">
+    <section id="features" className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 lg:mb-20">
           <div className="inline-block px-4 py-2 bg-amber-500 border-2 border-amber-600 rounded-full mb-4 text-sm font-bold text-white shadow-md">
