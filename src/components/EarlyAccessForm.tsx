@@ -28,44 +28,44 @@ export default function EarlyAccessForm() {
 
   return (
     <section id="early-access" className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24 bg-gradient-dark relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-gold-500/10 via-transparent to-gold-500/10 pointer-events-none"></div>
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-gold-500/20 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gold-500/20 rounded-full blur-3xl"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 via-transparent to-amber-500/10 pointer-events-none"></div>
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl"></div>
 
       <div className="max-w-3xl mx-auto relative">
         <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold-500 border-2 border-gold-600 rounded-full mb-6 text-sm font-bold text-white shadow-lg animate-pulse">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500 border-2 border-amber-600 rounded-full mb-6 text-sm font-bold text-white shadow-lg animate-pulse">
             <Gift className="w-4 h-4" />
             <span>Limited Time: Lock in Launch Pricing Forever</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-6">
             Join 500+ Agents Transforming Their Marketing
           </h2>
-          <p className="text-lg sm:text-xl text-cream-200 leading-relaxed font-medium">
+          <p className="text-lg sm:text-xl text-gray-300 leading-relaxed font-medium">
             Get exclusive early access to all game-changing features: hyper-local content, Google AI suite, brand customization, CRM integration, listing automation, and your own digital avatar.
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-bolder p-8 sm:p-10 border-2 border-gold-500">
-          <div className="mb-6 bg-gold-100 border-l-4 border-gold-600 shadow-sm p-4 rounded">
+        <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-bolder p-8 sm:p-10 border-2 border-amber-500">
+          <div className="mb-6 bg-amber-100 border-l-4 border-amber-600 shadow-sm p-4 rounded">
             <div className="flex items-start gap-3">
-              <Sparkles className="w-5 h-5 text-gold-600 flex-shrink-0 mt-0.5" />
-              <div className="text-sm text-navy-400 font-medium">
-                <span className="font-bold text-navy-600">Early Access Benefits:</span> Lifetime launch pricing, all core features, unlimited content, and priority support.
+              <Sparkles className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+              <div className="text-sm text-gray-700 font-medium">
+                <span className="font-bold text-gray-900">Early Access Benefits:</span> Lifetime launch pricing, all core features, unlimited content, and priority support.
               </div>
             </div>
           </div>
 
           <div className="mb-6">
-            <label htmlFor="email" className="block text-sm font-bold text-navy-600 mb-3">Email Address</label>
+            <label htmlFor="email" className="block text-sm font-bold text-gray-900 mb-3">Email Address</label>
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                <Mail className="h-5 w-5 text-cream-400" />
+                <Mail className="h-5 w-5 text-gray-400" />
               </div>
               <input
                 type="email" id="email" value={email} onChange={(e)=>setEmail(e.target.value)}
                 placeholder="agent@example.com" disabled={status==='loading'}
-                className="block w-full pl-12 pr-4 py-4 border-2 border-cream-400 rounded-lg focus:ring-2 focus:ring-gold-500 focus:border-gold-500 transition-all disabled:bg-cream-100 disabled:cursor-not-allowed text-base font-medium"
+                className="block w-full pl-12 pr-4 py-4 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all disabled:bg-gray-100 disabled:cursor-not-allowed text-base font-medium"
                 required
               />
             </div>

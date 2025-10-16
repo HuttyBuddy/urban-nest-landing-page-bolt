@@ -22,7 +22,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b-2 border-cream-300 shadow-md">
+    <header className="sticky top-0 z-50 bg-white border-b-2 border-gray-200 shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           <button
@@ -42,7 +42,7 @@ export default function Header() {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-navy-500 hover:text-gold-600 font-bold text-sm lg:text-base transition-colors duration-200"
+                className="text-gray-900 hover:text-amber-600 font-bold text-sm lg:text-base transition-colors duration-200"
               >
                 {item.label}
               </button>
@@ -58,26 +58,26 @@ export default function Header() {
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-cream-200 transition-colors focus:outline-none focus:ring-2 focus:ring-gold-500"
+            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? (
-              <X className="w-6 h-6 text-navy-500" />
+              <X className="w-6 h-6 text-gray-900" />
             ) : (
-              <Menu className="w-6 h-6 text-navy-500" />
+              <Menu className="w-6 h-6 text-gray-900" />
             )}
           </button>
         </div>
       </div>
 
       {mobileMenuOpen && (
-        <div className="md:hidden border-t-2 border-cream-300 bg-white shadow-bold">
+        <div className="md:hidden border-t-2 border-gray-200 bg-white shadow-bold">
           <nav className="px-4 py-6 space-y-4">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left text-navy-500 hover:text-gold-600 font-bold text-base py-2 transition-colors duration-200"
+                className="block w-full text-left text-gray-900 hover:text-amber-600 font-bold text-base py-2 transition-colors duration-200"
               >
                 {item.label}
               </button>
