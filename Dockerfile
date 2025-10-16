@@ -19,5 +19,5 @@ COPY --from=build /app/dist /usr/share/nginx/html
 ENV PORT=8080
 EXPOSE 8080
 
-# Render template → start Nginx
-CMD ["sleep", "infinity"]
+# Render template → start Nginx (use default entrypoint)
+CMD ["nginx", "-g", "daemon off;"]
