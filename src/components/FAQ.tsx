@@ -73,16 +73,16 @@ export default function FAQ() {
   ];
 
   return (
-    <section id="faq" className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24 bg-gradient-to-b from-white via-cream-50 to-gold-50">
+    <section id="faq" className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24 bg-gradient-to-b from-white to-cream-100">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
-          <div className="inline-block px-5 py-3 bg-gradient-to-r from-gold-500 to-gold-600 border-2 border-gold-700 rounded-full mb-4 text-sm font-extrabold text-white shadow-xl">
+          <div className="inline-block px-4 py-2 bg-gold-500 border-2 border-gold-600 rounded-full mb-4 text-sm font-bold text-white shadow-md">
             Questions & Answers
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy-700 mb-6">
-            Everything You <span className="text-gold-600">Need to Know</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy-600 mb-6">
+            Everything You Need to Know
           </h2>
-          <p className="text-lg sm:text-xl text-navy-500 leading-relaxed font-medium">
+          <p className="text-lg sm:text-xl text-navy-400 leading-relaxed">
             Have a question that's not answered here? Reach out through the early access form.
           </p>
         </div>
@@ -91,22 +91,22 @@ export default function FAQ() {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-3 border-gold-300 hover:border-gold-500 overflow-hidden"
+              className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 border-2 border-cream-300 overflow-hidden"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full px-6 py-6 flex items-start gap-4 text-left hover:bg-gold-50 transition-colors"
+                className="w-full px-6 py-6 flex items-start gap-4 text-left hover:bg-cream-100 transition-colors"
               >
-                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-gold-400 to-gold-600 border-2 border-gold-700 shadow-md flex items-center justify-center">
-                  <faq.icon className="w-6 h-6 text-white" />
+                <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-gold-500 border-2 border-gold-600 shadow-sm flex items-center justify-center">
+                  <faq.icon className="w-5 h-5 text-white" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h3 className="text-lg font-extrabold text-navy-700 mb-1 pr-8">
+                  <h3 className="text-lg font-extrabold text-navy-600 mb-1 pr-8">
                     {faq.question}
                   </h3>
                 </div>
                 <ChevronDown
-                  className={`flex-shrink-0 w-6 h-6 text-gold-600 transition-transform duration-300 ${
+                  className={`flex-shrink-0 w-6 h-6 text-navy-300 transition-transform duration-300 ${
                     openIndex === index ? 'transform rotate-180' : ''
                   }`}
                 />
@@ -119,8 +119,8 @@ export default function FAQ() {
                     : 'max-h-0 opacity-0'
                 }`}
               >
-                <div className="px-6 pb-6 pl-20 bg-gold-50">
-                  <p className="text-navy-600 leading-relaxed font-bold">
+                <div className="px-6 pb-6 pl-20">
+                  <p className="text-navy-400 leading-relaxed font-medium">
                     {faq.answer}
                   </p>
                 </div>
@@ -130,12 +130,12 @@ export default function FAQ() {
         </div>
 
         <div className="mt-12 text-center">
-          <p className="text-navy-600 mb-4 font-bold text-lg">
+          <p className="text-navy-400 mb-4 font-medium">
             Still have questions?
           </p>
           <button
             onClick={() => document.querySelector('#early-access')?.scrollIntoView({ behavior: 'smooth' })}
-            className="text-white font-extrabold bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-600 hover:to-gold-700 transition-all px-8 py-4 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 text-lg border-2 border-gold-700"
+            className="text-gold-600 font-bold hover:text-gold-700 transition-colors text-lg"
           >
             Get in touch through the early access form
           </button>
