@@ -59,7 +59,7 @@ export default function Features() {
   ];
 
   return (
-    <section id="features" className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24 bg-gradient-to-b from-cream-100 to-white">
+    <section id="features" className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24 bg-gradient-to-b from-cream-50 to-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 lg:mb-20">
           <div className="inline-block px-4 py-2 bg-gold-500 border-2 border-gold-600 rounded-full mb-4 text-sm font-bold text-white shadow-md">
@@ -87,7 +87,7 @@ export default function Features() {
                 key={index}
                 className="bg-white p-8 rounded-2xl shadow-bold hover:shadow-bolder transition-all duration-300 transform hover:-translate-y-2 border-2 border-cream-300 hover:border-gold-500 relative overflow-hidden group"
               >
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gold-100 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500"></div>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gold-50 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500"></div>
                 <div className="relative">
                   <div className="flex items-start justify-between mb-4">
                     <div className="w-14 h-14 rounded-xl bg-gold-500 border-2 border-gold-600 shadow-md flex items-center justify-center group-hover:bg-gold-600 transition-all">
@@ -132,7 +132,7 @@ export default function Features() {
                 key={index}
                 className="bg-white p-8 rounded-2xl shadow-bold hover:shadow-bolder transition-all duration-300 transform hover:-translate-y-2 border-2 border-cream-300 hover:border-gold-500 relative overflow-hidden group"
               >
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gold-100 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500"></div>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gold-50 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500"></div>
                 <div className="relative">
                   <div className="w-14 h-14 rounded-xl bg-gold-500 border-2 border-gold-600 shadow-md flex items-center justify-center mb-6 group-hover:bg-gold-600 transition-all">
                     <item.icon className="w-7 h-7 text-white" strokeWidth={2.5} />

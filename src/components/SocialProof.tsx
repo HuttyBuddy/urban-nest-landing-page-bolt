@@ -36,7 +36,7 @@ export default function SocialProof() {
   ];
 
   return (
-    <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24 bg-gradient-to-b from-white to-cream-100">
+    <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24 bg-gradient-to-b from-white to-cream-50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <div className="inline-block px-4 py-2 bg-gold-500 border-2 border-gold-600 rounded-full mb-4 text-sm font-bold text-white shadow-md">
