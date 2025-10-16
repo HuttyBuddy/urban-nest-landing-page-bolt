@@ -1,5 +1,6 @@
 import { ArrowRight, TrendingUp, Clock, Users } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import Logo from './Logo';
 
 interface HeroProps {
   onGetStarted: () => void;
@@ -26,11 +27,7 @@ export default function Hero({ onGetStarted }: HeroProps) {
 
       <div className="max-w-7xl mx-auto relative">
         <div className="flex justify-center mb-8 lg:mb-12">
-          <img
-            src="/urban-nest-logo.png"
-            alt="Urban Nest"
-            className="h-20 w-auto sm:h-24 lg:h-32 animate-fade-in"
-          />
+          <Logo className="scale-150 sm:scale-[2] lg:scale-[2.5]" showTagline={true} />
         </div>
 
         <div className="text-center max-w-4xl mx-auto">

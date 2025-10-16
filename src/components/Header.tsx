@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Menu, X, ArrowRight } from 'lucide-react';
+import Logo from './Logo';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -22,19 +23,15 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b-2 border-gray-200 shadow-md">
+    <header className="sticky top-0 z-[100] bg-white border-b-2 border-gray-200 shadow-md backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           <button
             onClick={scrollToTop}
-            className="flex items-center transition-transform hover:scale-105 focus:outline-none"
+            className="transition-transform hover:scale-105 focus:outline-none flex-shrink-0"
             aria-label="Urban Nest Home"
           >
-            <img
-              src="/urban-nest-logo.png"
-              alt="Urban Nest"
-              className="h-10 sm:h-12 lg:h-14 w-auto"
-            />
+            <Logo />
           </button>
 
           <nav className="hidden md:flex items-center gap-8">
