@@ -18,7 +18,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <div className="flex items-center mb-4">
               <img
-                src="/urban-nest-logo.png"
+                src="/Urban Nest Logo Large.png"
                 alt="Urban Nest"
                 className="h-10 w-auto"
               />
