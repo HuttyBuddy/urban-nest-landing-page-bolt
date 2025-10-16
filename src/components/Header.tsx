@@ -31,7 +31,7 @@ export default function Header() {
             aria-label="Urban Nest Home"
           >
             <img
-              src="/urban-nest-logo.png"
+              src="/Urban Nest Logo Large.png"
               alt="Urban Nest"
               className="h-10 sm:h-12 lg:h-14 w-auto"
             />
