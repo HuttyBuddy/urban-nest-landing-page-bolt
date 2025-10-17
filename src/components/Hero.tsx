@@ -40,12 +40,12 @@ export default function Hero({ onGetStarted }: HeroProps) {
             <span>Join 500+ Agents Transforming Their Marketing</span>
           </div>
 
-<h1 className="text-4xl ...">
-  Win Your Farm.
-  <span className="block mt-2 bg-gradient-cta bg-clip-text text-transparent">
-    In 5 Minutes a Week.
-  </span>
-</h1>
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-gray-900 tracking-tight leading-tight">
+            Win Your Farm.
+            <span className="block mt-3 bg-gradient-cta bg-clip-text text-transparent">
+              In 5 Minutes a Week.
+            </span>
+          </h1>
 
           <div className="h-16 sm:h-20 mb-8 lg:mb-10 flex items-center justify-center">
             <p className="text-xl sm:text-2xl lg:text-3xl text-gray-900 font-bold leading-relaxed transition-all duration-500 animate-fade-in">
