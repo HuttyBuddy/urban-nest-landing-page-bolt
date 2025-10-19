@@ -1,31 +1,53 @@
+# cloudbuild.yaml
 steps:
-  # Step 1: Build the container image using our Dockerfile
-  # We tag it with the unique commit SHA to give it a version
-  - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/$PROJECT_ID/urban-nest-landing-page:$SHORT_SHA', '.']
+  # 1) Build container (Dockerfile in repo)
+  - name: gcr.io/cloud-builders/docker
+    args: ['build', '-t', 'us-west1-docker.pkg.dev/${PROJECT_ID}/cloud-run-source-deploy/urbannest-landing:${SHORT_SHA}', '.']
 
-  # Step 2: Push the container image to Google Container Registry
-  - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/$PROJECT_ID/urban-nest-landing-page:$SHORT_SHA']
+  # 2) Push to Artifact Registry (preferred over GCR)
+  - name: gcr.io/cloud-builders/docker
+    args: ['push', 'us-west1-docker.pkg.dev/${PROJECT_ID}/cloud-run-source-deploy/urbannest-landing:${SHORT_SHA}']
 
-  # Step 3: Deploy the specific image to Cloud Run
-  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-    entrypoint: gcloud
+  # 3) Deploy to THE service your LB points at: urbannest-landing
+  - name: gcr.io/google.com/cloudsdktool/cloud-sdk
+    entrypoint: bash
     args:
-      - 'run'
-      - 'deploy'
-      - 'urban-nest-landing-page' # Your service name
-      - '--image=gcr.io/$PROJECT_ID/urban-nest-landing-page:$SHORT_SHA' # The exact image we just built and pushed
-      - '--region=us-west1'
-      - '--platform=managed'
-      - '--allow-unauthenticated'
+      - -c
+      - |
+        gcloud run deploy urbannest-landing \
+          --image us-west1-docker.pkg.dev/${PROJECT_ID}/cloud-run-source-deploy/urbannest-landing:${SHORT_SHA} \
+          --region us-west1 \
+          --platform managed \
+          --allow-unauthenticated \
+          --project ${PROJECT_ID}
 
-# This tells Cloud Build what the final image is
+  # 4) Ensure CDN honors origin headers (idempotent; safe to run every build)
+  - name: gcr.io/google.com/cloudsdktool/cloud-sdk
+    id: "CDN_USE_ORIGIN_HEADERS"
+    entrypoint: bash
+    args:
+      - -c
+      - |
+        gcloud compute backend-services update urbannest-cr-backend \
+          --global --enable-cdn --cache-mode=USE_ORIGIN_HEADERS \
+          --project ${PROJECT_ID} || true
+
+  # 5) Invalidate CDN so new index.html is fetched
+  - name: gcr.io/google.com/cloudsdktool/cloud-sdk
+    id: "CDN_INVALIDATE"
+    entrypoint: bash
+    args:
+      - -c
+      - |
+        gcloud compute url-maps invalidate-cdn-cache urban-nest-final-lb \
+          --path "/index.html" --project ${PROJECT_ID} || true
+
 images:
-  - 'gcr.io/$PROJECT_ID/urban-nest-landing-page:$SHORT_SHA'
+  - us-west1-docker.pkg.dev/${PROJECT_ID}/cloud-run-source-deploy/urbannest-landing:${SHORT_SHA}
 
+# Keep Cloud Logging only if you want
 options:
   logging: CLOUD_LOGGING_ONLY
 
-# This required line specifies which service account the build will use
+# Use your build runner SA (must have permissions for AR push, Cloud Run deploy, and Compute updates)
 serviceAccount: 'cloud-build-runner@urban-nest-2.iam.gserviceaccount.com'
