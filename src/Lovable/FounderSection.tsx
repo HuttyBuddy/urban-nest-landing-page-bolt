@@ -15,7 +15,7 @@ export default function FounderSection() {
           <div className="flex justify-center">
             <img
               className="rounded-full border-8 border-amber-500 shadow-2xl w-64 h-64 sm:w-80 sm:h-80 object-cover"
-              src="/assets/lovable/KevinHuttyHeadshot.png"
+              src="/assets/Lovable/KevinHuttyHeadshot.png"
               alt="Kevin Hutty - Founder"
             />
           </div>

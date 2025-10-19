@@ -23,6 +23,7 @@ function App() {
       <Features />
       <SocialProof />
       <HowItWorks />
+      <LovableSections />
       <FAQ />
       <div ref={formRef}>
         <EarlyAccessForm />
