@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import LovableSections from './components/LovableSections';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Features from './components/Features';
@@ -16,7 +17,7 @@ function App() {
   };
 
   return (
-    <div className="bg-white text-gray-900">
+    <div className="bg-gray-50 text-gray-800">
       <Header />
       <Hero onGetStarted={scrollToForm} />
       <Features />
@@ -32,3 +33,4 @@ function App() {
 }
 
 export default App;
+
