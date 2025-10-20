@@ -1,4 +1,14 @@
-﻿type Item = { title: string; description: string };
+﻿import React from 'react';
+
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      [elemName: string]: any;
+    }
+  }
+}
+
+type Item = { title: string; description: string };
 
 function RoadmapCard({ title, description }: Item) {
   return (
