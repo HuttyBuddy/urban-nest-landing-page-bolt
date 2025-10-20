@@ -9,7 +9,7 @@
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/Urban Nest Logo Large.png",
+      "src": "/urban-nest-logo-large.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
