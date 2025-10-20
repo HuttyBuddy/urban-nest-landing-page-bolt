@@ -40,9 +40,9 @@ steps:
       - -c
       - |
         gcloud compute url-maps invalidate-cdn-cache urban-nest-final-lb \
-          --path "/index.html" --project ${PROJECT_ID} || true
-
-images:
+          --path "/index.html" \
+          --path "/" \
+          --project ${PROJECT_ID} || true
   - us-west1-docker.pkg.dev/${PROJECT_ID}/cloud-run-source-deploy/urbannest-landing:${SHORT_SHA}
 
 # Keep Cloud Logging only if you want
