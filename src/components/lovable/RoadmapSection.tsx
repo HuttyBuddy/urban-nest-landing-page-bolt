@@ -25,7 +25,7 @@ export default function RoadmapSection() {
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight">Our Roadmap</h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-600 font-medium leading-relaxed">
-            We’re just getting started. Here’s what’s next for Urban Nest.
+            Weï¿½re just getting started. Hereï¿½s whatï¿½s next for Urban Nest.
           </p>
         </div>
 
