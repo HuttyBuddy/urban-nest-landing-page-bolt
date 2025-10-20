@@ -1,4 +1,4 @@
-﻿import { useRef } from 'react';
+import { useEffect } from 'react';
 import FounderSection from './components/lovable/FounderSection';
 import RoadmapSection from './components/lovable/RoadmapSection';
 import Header from './components/Header';
@@ -11,11 +11,29 @@ import EarlyAccessForm from './components/EarlyAccessForm';
 import Footer from './components/Footer';
 
 function App() {
-  const formRef = useRef<HTMLDivElement>(null);
-
   const scrollToForm = () => {
-    formRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (typeof window === 'undefined') return;
+
+    const element = document.getElementById('early-access');
+    element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    const newUrl = `${window.location.pathname}${window.location.search}#early-access`;
+    window.history.pushState(null, '', newUrl);
   };
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const hash = window.location.hash.replace('#', '');
+    if (!hash) return;
+
+    const element = document.getElementById(hash);
+    if (element) {
+      requestAnimationFrame(() => {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
+  }, []);
 
   return (
     <div className="bg-gray-50 text-gray-800">
@@ -27,9 +45,7 @@ function App() {
       <FounderSection />
       <RoadmapSection />
       <FAQ />
-      <div ref={formRef}>
-        <EarlyAccessForm />
-      </div>
+      <EarlyAccessForm />
       <Footer />
     </div>
   );
