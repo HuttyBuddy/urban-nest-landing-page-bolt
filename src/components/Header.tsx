@@ -17,6 +17,8 @@ export default function Header() {
   const navItems = [
     { label: 'How It Works', id: 'how-it-works' },
     { label: 'Features', id: 'features' },
+    { label: 'Founder', id: 'founder' },
+    { label: 'Roadmap', id: 'roadmap' },
     { label: 'FAQ', id: 'faq' },
     { label: 'Pricing', id: 'early-access' },
   ];
