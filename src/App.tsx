@@ -1,5 +1,6 @@
 ﻿import { useRef } from 'react';
-import LovableSections from './components/LovableSections';
+import FounderSection from './components/lovable/FounderSection';
+import RoadmapSection from './components/lovable/RoadmapSection';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Features from './components/Features';
@@ -23,7 +24,8 @@ function App() {
       <Features />
       <SocialProof />
       <HowItWorks />
-      <LovableSections />
+      <FounderSection />
+      <RoadmapSection />
       <FAQ />
       <div ref={formRef}>
         <EarlyAccessForm />
