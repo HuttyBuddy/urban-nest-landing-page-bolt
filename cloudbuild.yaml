@@ -40,8 +40,8 @@ steps:
       - -c
       - |
         gcloud compute url-maps invalidate-cdn-cache urban-nest-final-lb \
-          --path "/index.html" \
-          --path "/" \
+          --path=/index.html \
+          --path=/ \
           --project ${PROJECT_ID} || true
   - us-west1-docker.pkg.dev/${PROJECT_ID}/cloud-run-source-deploy/urbannest-landing:${SHORT_SHA}
 
