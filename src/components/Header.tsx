@@ -4,13 +4,27 @@ import { Menu, X, ArrowRight } from 'lucide-react';
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const updateUrlHash = (hash: string) => {
+    if (typeof window === 'undefined') return;
+
+    const newUrl = `${window.location.pathname}${window.location.search}${hash}`;
+    window.history.pushState(null, '', newUrl);
+  };
+
   const scrollToSection = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    if (typeof window === 'undefined') return;
+
+    const element = document.getElementById(id);
+    element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    updateUrlHash(`#${id}`);
     setMobileMenuOpen(false);
   };
 
   const scrollToTop = () => {
+    if (typeof window === 'undefined') return;
+
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    updateUrlHash('');
     setMobileMenuOpen(false);
   };
 
