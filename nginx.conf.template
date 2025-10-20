@@ -30,6 +30,9 @@ server {
 
     # SPA fallback.
     location / {
+        # The CDN requests "/" instead of "/index.html" for the shell, so
+        # we must explicitly disable caching here as well.
+        add_header Cache-Control "no-store, max-age=0, must-revalidate" always;
         try_files $uri $uri/ /index.html;
     }
 }
