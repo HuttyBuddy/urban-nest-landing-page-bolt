@@ -1,11 +1,3 @@
-// Force-unregister any old service workers + clear caches (defensive)
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.getRegistrations?.().then(regs => regs.forEach(r => r.unregister()));
-  if (window.caches?.keys) {
-    caches.keys().then(keys => keys.forEach(k => caches.delete(k)));
-  }
-}
-
 import "./index.css";
 // In src/main.tsx
 import React from 'react'
