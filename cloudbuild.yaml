@@ -40,7 +40,7 @@ steps:
 
   # 5) Invalidate CDN so new index.html is fetched
   - name: gcr.io/google.com/cloudsdktool/cloud-sdk
-    id: CDN_INVALIDATE
+    id: "CDN_INVALIDATE"
     entrypoint: gcloud
     args:
       - compute
@@ -49,6 +49,7 @@ steps:
       - urban-nest-final-lb
       - --path=/index.html
       - --path=/
+      - --path=/sw.js
       - --project=${PROJECT_ID}
     allowFailure: true
 

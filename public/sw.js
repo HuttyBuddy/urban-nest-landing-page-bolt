@@ -1,4 +1,4 @@
-const CACHE_NAME = 'urban-nest-v2';
+const CACHE_NAME = 'urban-nest-v3';
 const PRECACHE_URLS = [
   '/urban-nest-logo-large.png',
   '/urban-nest-logo.png',
