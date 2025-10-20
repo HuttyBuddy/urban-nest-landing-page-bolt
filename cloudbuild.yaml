@@ -2,11 +2,17 @@
 steps:
   # 1) Build container (Dockerfile in repo)
   - name: gcr.io/cloud-builders/docker
-    args: ['build', '-t', 'us-west1-docker.pkg.dev/${PROJECT_ID}/cloud-run-source-deploy/urbannest-landing:${SHORT_SHA}', '.']
+    args:
+      - build
+      - -t
+      - us-west1-docker.pkg.dev/${PROJECT_ID}/cloud-run-source-deploy/urbannest-landing:${SHORT_SHA}
+      - .
 
   # 2) Push to Artifact Registry (preferred over GCR)
   - name: gcr.io/cloud-builders/docker
-    args: ['push', 'us-west1-docker.pkg.dev/${PROJECT_ID}/cloud-run-source-deploy/urbannest-landing:${SHORT_SHA}']
+    args:
+      - push
+      - us-west1-docker.pkg.dev/${PROJECT_ID}/cloud-run-source-deploy/urbannest-landing:${SHORT_SHA}
 
   # 3) Deploy to THE service your LB points at: urbannest-landing
   - name: gcr.io/google.com/cloudsdktool/cloud-sdk
@@ -23,7 +29,7 @@ steps:
 
   # 4) Ensure CDN honors origin headers (idempotent; safe to run every build)
   - name: gcr.io/google.com/cloudsdktool/cloud-sdk
-    id: "CDN_USE_ORIGIN_HEADERS"
+    id: CDN_USE_ORIGIN_HEADERS
     entrypoint: bash
     args:
       - -c
@@ -34,7 +40,7 @@ steps:
 
   # 5) Invalidate CDN so new index.html is fetched
   - name: gcr.io/google.com/cloudsdktool/cloud-sdk
-    id: "CDN_INVALIDATE"
+    id: CDN_INVALIDATE
     entrypoint: gcloud
     args:
       - compute
@@ -54,4 +60,4 @@ options:
   logging: CLOUD_LOGGING_ONLY
 
 # Use your build runner SA (must have permissions for AR push, Cloud Run deploy, and Compute updates)
-serviceAccount: 'cloud-build-runner@urban-nest-2.iam.gserviceaccount.com'
+serviceAccount: cloud-build-runner@urban-nest-2.iam.gserviceaccount.com
