@@ -29,11 +29,11 @@ export default function FounderSection() {
           <div className="text-center md:text-left">
             <h3 className="text-3xl lg:text-4xl font-extrabold text-gray-900">Kevin Hutty</h3>
             <p className="mt-2 text-lg font-semibold text-amber-600">
-              Founder, Urban Nest | Realtor® & Tech Lead
+              Founder, Urban Nest | Realtor® & Team Lead
             </p>
             <div className="mt-4 space-y-4 text-gray-700 font-medium leading-relaxed">
               <p>
-                Kevin brings 14 years of public-sector leadership experience together with a proven real estate track record to help agents create authentic, hyper-local marketing.
+                Kevin brings 15 years of public-sector leadership experience together with a proven real estate track record to help agents create authentic, hyper-local marketing.
               </p>
               <p>
                 His product vision is rooted in the belief that agents should spend their time serving clients—not fighting content calendars or learning complex tools. Urban Nest was built to make that possible.
