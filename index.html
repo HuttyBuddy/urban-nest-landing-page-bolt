@@ -9,10 +9,10 @@
     <meta name="title" content="Urban Nest - AI Marketing for Real Estate Agents" />
     <meta name="description" content="Stop sounding like every other agent. AI-powered marketing that understands your voice, your market, and your clients. Generate social posts, emails, and blog content in seconds." />
 
-    <meta name="theme-color" content="#495155" />
+    <meta name="theme-color" content="#FFFFFF" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="Urban Nest" />
     <link rel="apple-touch-icon" href="/Urban Nest Favicon.png" />
     <link rel="manifest" href="/manifest.json" />
@@ -79,53 +79,3 @@
     </script>
   </body>
 </html>
-    </video>
-    <div class="hero-overlay"></div>
-
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker
-            .register('/sw.js', { updateViaCache: 'none' })
-            .then((registration) => {
-              const sendSkipWaiting = (worker) => {
-                if (worker) {
-                  worker.postMessage({ type: 'SKIP_WAITING' });
-                }
-              };
-
-              registration.update();
-
-              if (registration.waiting) {
-                sendSkipWaiting(registration.waiting);
-              }
-
-              registration.addEventListener('updatefound', () => {
-                const newWorker = registration.installing;
-                if (!newWorker) return;
-
-                newWorker.addEventListener('statechange', () => {
-                  if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                    sendSkipWaiting(newWorker);
-                  }
-                });
-              });
-            })
-            .catch((error) => {
-              console.error('Service worker registration failed:', error);
-            });
-
-          let refreshing = false;
-          navigator.serviceWorker.addEventListener('controllerchange', () => {
-            if (refreshing) return;
-            refreshing = true;
-            window.location.reload();
-          });
-        });
-      }
-    </script>
-  </body>
-</html>
-
