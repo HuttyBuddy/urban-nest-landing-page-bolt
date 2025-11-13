@@ -1,117 +1,62 @@
-import { CircleUser as UserCircle, Sparkles, Rocket, CheckCircle } from 'lucide-react';
-
 export default function HowItWorks() {
   const steps = [
     {
-      icon: UserCircle,
-      title: "Tell Us About You",
-      description: "Connect your CRM, upload sample content for brand customization, and define your local market area. Takes just 5 minutes.",
-      details: [
-        "Connect your CRM (KV Core, HubSpot, etc.)",
-        "Upload samples for brand voice training",
-        "Set your hyper-local market area"
-      ],
-      time: "5 min"
+      title: "The Command Center",
+      description: "Your central hub for managing properties, listings, and marketing efforts. The intuitive dashboard gives you a complete overview of your real estate empire at a glance.",
+      image: "/glimpse/step1-dashboard.png"
     },
     {
-      icon: Sparkles,
-      title: "AI Learns Your Voice & Creates Your Avatar",
-      description: "Google AI analyzes your writing style, creates your digital clone for video content, and integrates hyper-local market data from your area.",
-      details: [
-        "Brand voice pattern analysis",
-        "Digital clone creation for videos",
-        "Hyper-local data integration"
-      ],
-      time: "Instant"
+      title: "AI-Powered Visuals",
+      description: "Transform property photos with our suite of AI tools. From virtual staging to image enhancement, creating stunning visuals that capture attention and sell faster has never been easier.",
+      image: "/glimpse/step2-ai-visuals.jpg"
     },
     {
-      icon: Rocket,
-      title: "Generate & Automate",
-      description: "Create hyper-local content instantly, automate listing marketing, and produce video content with your digital clone. Your choice to review or auto-publish.",
-      details: [
-        "Hyper-local content generation",
-        "Automated listing campaigns",
-        "Video creation with your clone"
-      ],
-      time: "30 sec"
+      title: "Compelling Content, Instantly",
+      description: "Generate engaging property descriptions, blog posts, and social media updates with our AI Content Writer. Tailor the tone and style to your brand voice for a consistent and professional online presence.",
+      image: "/glimpse/step3-ai-content.jpg"
+    },
+    {
+      title: "Your Complete Marketing Package",
+      description: "With just a few clicks, Urban Nest assembles a comprehensive marketing kit for each property. High-resolution images, compelling copy, and social-media-ready content are all packaged and ready to deploy.",
+      image: "/glimpse/step4-final-package.jpg"
     }
   ];
 
   return (
-    <section id="how-it-works" className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24 bg-gray-50">
+    <section id="how-it-works" className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 lg:mb-20">
-          <div className="inline-block px-4 py-2 bg-amber-500 border-2 border-amber-600 rounded-full mb-4 text-sm font-bold text-white shadow-md">
-            Simple 3-Step Process
-          </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6">
-            From Setup to Published Content
-            <span className="block mt-2">in Under 10 Minutes</span>
+            A Glimpse Inside Urban Nest
           </h2>
           <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            No technical skills required. Powerful AI features working together seamlessly. Just results.
+            From managing your properties to deploying a complete marketing package, see how Urban Nest streamlines your workflow.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mb-16">
+        <div className="space-y-16">
           {steps.map((step, index) => (
-            <div key={index} className="relative">
-              <div className="bg-white p-8 rounded-2xl shadow-bold hover:shadow-bolder transition-all duration-300 transform hover:-translate-y-2 h-full border-2 border-gray-200 hover:border-amber-500">
-                <div className="flex items-start justify-between mb-6">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-cta flex items-center justify-center shadow-lg">
-                    <step.icon className="w-8 h-8 text-white" strokeWidth={2.5} />
-                  </div>
-                  <div className="text-xs font-bold text-white bg-gray-900 px-3 py-1 rounded-full">
-                    {step.time}
-                  </div>
+            <div key={index} className="flex flex-col md:flex-row items-center gap-8 lg:gap-12">
+              <div className={`md:w-1/2 ${index % 2 === 1 ? 'md:order-2' : ''}`}>
+                <div className="text-sm font-bold text-amber-600 mb-2">
+                  STEP {index + 1}
                 </div>
-
-                <div className="mb-4">
-                  <div className="text-sm font-bold text-amber-600 mb-2">
-                    STEP {index + 1}
-                  </div>
-                  <h3 className="text-2xl font-extrabold text-gray-900 mb-3">
-                    {step.title}
-                  </h3>
-                  <p className="text-gray-700 leading-relaxed mb-6 font-medium">
-                    {step.description}
-                  </p>
-                </div>
-
-                <ul className="space-y-3">
-                  {step.details.map((detail, detailIndex) => (
-                    <li key={detailIndex} className="flex items-center gap-3 text-sm text-gray-700 font-medium">
-                      <CheckCircle className="w-4 h-4 text-amber-600 flex-shrink-0" />
-                      <span>{detail}</span>
-                    </li>
-                  ))}
-                </ul>
+                <h3 className="text-2xl font-extrabold text-gray-900 mb-3">
+                  {step.title}
+                </h3>
+                <p className="text-gray-700 leading-relaxed font-medium">
+                  {step.description}
+                </p>
               </div>
-
-              {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-1/2 -right-6 lg:-right-12 w-12 lg:w-24 h-0.5 bg-gradient-to-r from-amber-500 to-transparent -translate-y-1/2"></div>
-              )}
+              <div className={`md:w-1/2 ${index % 2 === 1 ? 'md:order-1' : ''}`}>
+                <img
+                  src={step.image}
+                  alt={step.title}
+                  className="rounded-2xl shadow-bold border-2 border-gray-200"
+                />
+              </div>
             </div>
           ))}
-        </div>
-
-        <div className="bg-gradient-dark rounded-3xl p-8 sm:p-12 text-center text-white shadow-bolder border-2 border-amber-500">
-          <h3 className="text-2xl sm:text-3xl font-extrabold mb-4">
-            Ready to Transform Your Marketing?
-          </h3>
-          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto font-medium">
-            Don't waste another minute on content creation. Unlock hyper-local content, Google AI power, brand customization, CRM integration, listing automation, and your digital avatar today.
-          </p>
-          <button
-            onClick={() => document.querySelector('#early-access')?.scrollIntoView({ behavior: 'smooth' })}
-            className="inline-flex items-center gap-2 bg-gradient-cta hover:opacity-90 text-white font-bold px-8 py-4 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-lg"
-          >
-            Get Early Access Now
-            <Rocket className="w-5 h-5" />
-          </button>
-          <p className="mt-4 text-sm text-gray-400 font-medium">
-            Early adopters lock in exclusive launch pricing forever
-          </p>
         </div>
       </div>
     </section>
