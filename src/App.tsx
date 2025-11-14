@@ -1,23 +1,21 @@
 import { useEffect } from 'react';
-import FounderSection from './components/lovable/FounderSection';
-import RoadmapSection from './components/lovable/RoadmapSection';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Features from './components/Features';
-import SocialProof from './components/SocialProof';
+import Testimonials from './components/Testimonials';
 import HowItWorks from './components/HowItWorks';
 import FAQ from './components/FAQ';
-import EarlyAccessForm from './components/EarlyAccessForm';
+import FinalCTA from './components/FinalCTA';
 import Footer from './components/Footer';
 
 function App() {
   const scrollToForm = () => {
     if (typeof window === 'undefined') return;
 
-    const element = document.getElementById('early-access');
+    const element = document.getElementById('final-cta');
     element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-    const newUrl = `${window.location.pathname}${window.location.search}#early-access`;
+    const newUrl = `${window.location.pathname}${window.location.search}#final-cta`;
     window.history.pushState(null, '', newUrl);
   };
 
@@ -41,11 +39,9 @@ function App() {
       <Hero onGetStarted={scrollToForm} />
       <Features />
       <HowItWorks />
-      <SocialProof />
-      <FounderSection />
-      <RoadmapSection />
+      <Testimonials />
       <FAQ />
-      <EarlyAccessForm />
+      <FinalCTA />
       <Footer />
     </div>
   );
