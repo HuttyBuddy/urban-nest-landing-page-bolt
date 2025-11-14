@@ -68,7 +68,7 @@ export default function FAQ() {
     {
       icon: Sparkles,
       question: "What types of content can Urban Nest create?",
-      answer: "Urban Nest generates everything you need: hyper-local social media posts for Facebook, Instagram, and LinkedIn; personalized email campaigns pulled from your CRM; SEO-optimized blog articles; automated listing descriptions and marketing; neighborhood market reports; and our Virtual Staging tool helps you market listings effectively. All with your authentic brand voice."
+      answer: "Urban Nest generates everything you need: hyper-local social media posts; personalized email campaigns pulled from your CRM; SEO-optimized blog articles with AI image generation and editing; automated listing descriptions and marketing; neighborhood market reports with data visualization; and our Virtual Staging tool helps you market listings effectively. All with your authentic brand voice."
     }
   ];
 
