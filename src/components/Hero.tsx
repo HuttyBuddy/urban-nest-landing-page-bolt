@@ -41,9 +41,9 @@ export default function Hero({ onGetStarted }: HeroProps) {
           </div>
 
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-gray-900 tracking-tight leading-tight">
-            Win Your Farm.
+            Stop Sounding Like Every Other Agent.
             <span className="block mt-3 bg-gradient-cta bg-clip-text text-transparent">
-              In 5 Minutes a Week.
+              AI Marketing That Wins Your Farm.
             </span>
           </h1>
 
@@ -54,15 +54,15 @@ export default function Hero({ onGetStarted }: HeroProps) {
           </div>
 
           <p className="text-base sm:text-lg lg:text-xl text-gray-700 mb-8 lg:mb-10 leading-relaxed max-w-3xl mx-auto">
-            Urban Nest combines <span className="font-bold text-gray-900">Google AI-powered content generation</span> with <span className="font-bold text-gray-900">hyper-local market intelligence</span>, <span className="font-bold text-gray-900">brand customization</span>, <span className="font-bold text-gray-900">CRM integration</span>, <span className="font-bold text-gray-900">listing automation</span>, and your own <span className="font-bold text-gray-900">digital avatar</span> to create content that actually converts—all while you focus on what matters: selling homes.
+            Urban Nest is an AI marketing assistant that understands your voice, your market, and your clients. Generate social posts, emails, and blog content in seconds that is hyper-local, authentic, and drives leads—all while you focus on what matters: selling homes.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
             <button
               onClick={onGetStarted}
-              className="group w-full sm:w-auto bg-gradient-cta hover:opacity-90 text-white font-bold px-8 py-4 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 shadow-bolder hover:shadow-bolder transform hover:-translate-y-1 hover:scale-105 text-lg"
+              className="group w-full sm:w-auto bg-gradient-cta hover:opacity-90 text-white font-bold px-8 py-4 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 shadow-bolder hover:shadow-bolder-lg transform hover:-translate-y-1 hover:scale-105 text-lg animate-pulse"
             >
-              Claim Your Spot in the Private Beta
+              Get Early Access
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
             <button
