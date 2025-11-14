@@ -40,8 +40,8 @@ function App() {
       <Header />
       <Hero onGetStarted={scrollToForm} />
       <Features />
-      <SocialProof />
       <HowItWorks />
+      <SocialProof />
       <FounderSection />
       <RoadmapSection />
       <FAQ />
