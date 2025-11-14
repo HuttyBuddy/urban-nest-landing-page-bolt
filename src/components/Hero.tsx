@@ -9,7 +9,7 @@ export default function Hero({ onGetStarted }: HeroProps) {
   const [rotatingText, setRotatingText] = useState(0);
   const benefits = [
     "Hyper-Local Content Powered by Google AI",
-    "Create Video Content Without Ever Filming",
+    "Stage Any Listing in Minutes with AI",
     "CRM-Integrated Listing Marketing on Autopilot"
   ];
 
@@ -54,7 +54,7 @@ export default function Hero({ onGetStarted }: HeroProps) {
           </div>
 
           <p className="text-base sm:text-lg lg:text-xl text-gray-700 mb-8 lg:mb-10 leading-relaxed max-w-3xl mx-auto">
-            Urban Nest combines <span className="font-bold text-gray-900">Google AI-powered content generation</span> with <span className="font-bold text-gray-900">hyper-local market intelligence</span>, <span className="font-bold text-gray-900">brand customization</span>, <span className="font-bold text-gray-900">CRM integration</span>, <span className="font-bold text-gray-900">listing automation</span>, and your own <span className="font-bold text-gray-900">digital avatar</span> to create content that actually converts—all while you focus on what matters: selling homes.
+            Urban Nest combines <span className="font-bold text-gray-900">Google AI-powered content generation</span> with <span className="font-bold text-gray-900">hyper-local market intelligence</span>, <span className="font-bold text-gray-900">brand customization</span>, <span className="font-bold text-gray-900">CRM integration</span>, <span className="font-bold text-gray-900">listing automation</span>, and your own <span className="font-bold text-gray-900">AI-powered Virtual Staging</span> to create content that actually converts—all while you focus on what matters: selling homes.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
@@ -108,7 +108,7 @@ export default function Hero({ onGetStarted }: HeroProps) {
               <div className="w-8 h-8 rounded-full bg-amber-500 border-2 border-amber-600 flex items-center justify-center shadow-md">
                 <Users className="w-4 h-4 text-white" />
               </div>
-              <span className="text-xs font-bold text-gray-900 text-center">Digital Avatar</span>
+              <span className="text-xs font-bold text-gray-900 text-center">Virtual Staging</span>
             </div>
           </div>
 

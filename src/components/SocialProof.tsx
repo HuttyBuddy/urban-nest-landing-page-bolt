@@ -6,7 +6,7 @@ export default function SocialProof() {
       name: "Anthony James",
       role: "Team Lead, RE/MAX Gold",
       location: "Roseville, CA",
-      quote: "The hyper-local content engine is incredible. My teams posts now include neighborhood insights I didn't even know about. The digital avatar lets them create video content without filming. Game changer.",
+      quote: "The hyper-local content engine is incredible. My teams posts now include neighborhood insights I didn't even know about. The virtual staging is a total game-changer.",
       rating: 5,
       metric: "300% more engagement"
     },
@@ -46,7 +46,7 @@ export default function SocialProof() {
             Real Agents. Real Results.
           </h2>
           <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            Join hundreds of real estate professionals leveraging hyper-local content, Google AI, brand customization, CRM integration, listing automation, and digital avatars
+            Join hundreds of real estate professionals leveraging hyper-local content, Google AI, brand customization, CRM integration, listing automation, and AI-powered Virtual Staging
           </p>
         </div>
 

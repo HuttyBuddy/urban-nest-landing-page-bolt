@@ -8,7 +8,7 @@ export default function FAQ() {
     {
       icon: Sparkles,
       question: "How is Urban Nest different from ChatGPT or other AI tools?",
-      answer: "While ChatGPT is a general-purpose tool, Urban Nest combines Google AI with six specialized features: hyper-local content engine, brand customization, CRM integration, listing automation, and digital avatar creation. We're a complete marketing ecosystem built specifically for real estate, not just a text generator."
+      answer: "While ChatGPT is a general-purpose tool, Urban Nest combines Google AI with six specialized features: hyper-local content engine, brand customization, CRM integration, listing automation, and AI-powered Virtual Staging. We're a complete marketing ecosystem built specifically for real estate, not just a text generator."
     },
     {
       icon: MapPin,
@@ -22,8 +22,8 @@ export default function FAQ() {
     },
     {
       icon: Bot,
-      question: "What exactly is a Digital Avatar and how does it work?",
-      answer: "Your Digital Avatar is a digital clone of yourself that lets you create evergreen and hyper-local video content without ever stepping in front of a camera. Upload a few photos and video samples, and our AI creates a realistic avatar that looks and sounds like you. Use it to produce unlimited neighborhood tours, market updates, listing videos, and educational content—all featuring you, without the time commitment of filming."
+      question: "What exactly is Virtual Staging and how does it work?",
+      answer: "Virtual Staging is a powerful marketing tool that uses artificial intelligence to digitally furnish photos of empty rooms. It allows you to transform a vacant, uninspiring space into a beautifully furnished, move-in-ready home in just minutes, for a fraction of the cost of physical staging. The process is simple: 1. Upload: You upload a photo of an empty room (or a room you want to restyle). 2. Select: You choose a design style that best fits the property, such as 'Modern', 'Luxury', 'Farmhouse', or 'Coastal'. 3. Generate: Our AI analyzes the room's layout, lighting, and perspective and then digitally places photorealistic furniture and decor. The result is a stunning, high-resolution image that helps buyers visualize the property's true potential, drives more online engagement, and helps your listing stand out."
     },
     {
       icon: Zap,
@@ -53,7 +53,7 @@ export default function FAQ() {
     {
       icon: DollarSign,
       question: "What's included in early access pricing?",
-      answer: "Early access members lock in special launch pricing for life and get access to core features: hyper-local content engine, Google AI Suite, brand customization, CRM integration, listing automation, and digital avatar creation. Plus unlimited content generation, priority support, and exclusive input on new features."
+      answer: "Early access members lock in special launch pricing for life and get access to core features: hyper-local content engine, Google AI Suite, brand customization, CRM integration, listing automation, and AI-powered Virtual Staging. Plus unlimited content generation, priority support, and exclusive input on new features."
     },
     {
       icon: Zap,
@@ -68,7 +68,7 @@ export default function FAQ() {
     {
       icon: Sparkles,
       question: "What types of content can Urban Nest create?",
-      answer: "Urban Nest generates everything you need: hyper-local social media posts for Facebook, Instagram, and LinkedIn; personalized email campaigns pulled from your CRM; SEO-optimized blog articles; automated listing descriptions and marketing; neighborhood market reports; and your digital avatar creates video content featuring you without filming. All with your authentic brand voice."
+      answer: "Urban Nest generates everything you need: hyper-local social media posts for Facebook, Instagram, and LinkedIn; personalized email campaigns pulled from your CRM; SEO-optimized blog articles; automated listing descriptions and marketing; neighborhood market reports; and our Virtual Staging tool helps you market listings effectively. All with your authentic brand voice."
     }
   ];
 
