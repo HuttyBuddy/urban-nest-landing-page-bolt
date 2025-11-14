@@ -1,60 +1,43 @@
 export default function HowItWorks() {
   const steps = [
     {
-      title: "The Command Center",
-      description: "Your central hub for managing properties, listings, and marketing efforts. The intuitive dashboard gives you a complete overview of your real estate empire at a glance.",
-      image: "/glimpse/step1-dashboard.png"
+      title: 'Choose Your Tool',
+      description:
+        'Select from the AI Writing Studio for text content or the Image Studio for visuals like virtual staging and photo generation.',
     },
     {
-      title: "AI-Powered Visuals",
-      description: "Transform property photos with our suite of AI tools. From virtual staging to image enhancement, creating stunning visuals that capture attention and sell faster has never been easier.",
-      image: "/glimpse/step2-ai-visuals.jpg"
+      title: 'Provide Your Context',
+      description:
+        'Enter a simple prompt, topic, or property details. For images, just upload your photo. Let our AI know your goal.',
     },
     {
-      title: "Compelling Content, Instantly",
-      description: "Generate engaging property descriptions, blog posts, and social media updates with our AI Content Writer. Tailor the tone and style to your brand voice for a consistent and professional online presence.",
-      image: "/glimpse/step3-ai-content.jpg"
+      title: 'Generate & Refine',
+      description:
+        'Receive high-quality, ready-to-use marketing assets in seconds. Easily refine, edit, and save everything to your projects hub.',
     },
-    {
-      title: "Your Complete Marketing Package",
-      description: "With just a few clicks, Urban Nest assembles a comprehensive marketing kit for each property. High-resolution images, compelling copy, and social-media-ready content are all packaged and ready to deploy.",
-      image: "/glimpse/step4-final-package.jpg"
-    }
   ];
 
   return (
-    <section id="how-it-works" className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24 bg-white">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16 lg:mb-20">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6">
-            A Glimpse Inside Urban Nest
+    <section id="how-it-works" className="py-20 sm:py-28 lg:py-32 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-text-charcoal">
+            Create Incredible Content in 3 Simple Steps
           </h2>
-          <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            From managing your properties to deploying a complete marketing package, see how Urban Nest streamlines your workflow.
-          </p>
         </div>
-
-        <div className="space-y-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           {steps.map((step, index) => (
-            <div key={index} className="flex flex-col md:flex-row items-center gap-8 lg:gap-12">
-              <div className={`md:w-1/2 ${index % 2 === 1 ? 'md:order-2' : ''}`}>
-                <div className="text-sm font-bold text-amber-600 mb-2">
-                  STEP {index + 1}
+            <div key={index} className="relative">
+              <div className="flex flex-col items-center">
+                <div className="w-16 h-16 bg-gradient-cta rounded-full flex items-center justify-center text-white font-bold text-2xl mb-6 shadow-bold">
+                  {index + 1}
                 </div>
-                <h3 className="text-2xl font-extrabold text-gray-900 mb-3">
-                  {step.title}
-                </h3>
-                <p className="text-gray-700 leading-relaxed font-medium">
-                  {step.description}
-                </p>
+                <h3 className="text-xl font-bold text-text-charcoal mb-4">{step.title}</h3>
+                <p className="text-text-charcoal">{step.description}</p>
               </div>
-              <div className={`md:w-1/2 ${index % 2 === 1 ? 'md:order-1' : ''}`}>
-                <img
-                  src={step.image}
-                  alt={step.title}
-                  className="rounded-2xl shadow-bold border-2 border-gray-200"
-                />
-              </div>
+              {index < steps.length - 1 && (
+                <div className="hidden md:block absolute top-8 left-1/2 w-full h-px bg-gray-300 -translate-y-1/2"></div>
+              )}
             </div>
           ))}
         </div>

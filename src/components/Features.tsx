@@ -1,156 +1,48 @@
-import { Sparkles, Database, Zap, MessageSquare, Mail, FileText, CheckCircle, MapPin, Bot, Palette } from 'lucide-react';
+import { FileText, ImageIcon, Sparkles } from 'lucide-react';
 
 export default function Features() {
   const coreFeatures = [
     {
-      icon: MapPin,
-      title: 'Hyper-Local Content Engine',
-      description: 'Automatically pulls neighborhood insights, market trends, school ratings, local events, and community data to create content that speaks directly to your market.',
-      benefit: 'Sound like the true local expert you are',
+      icon: FileText,
+      title: 'Effortless Content Creation',
+      description:
+        "Generate SEO-optimized blog posts, engaging social media updates, compelling listing descriptions, and insightful neighborhood market reports. Our AI understands real estate, so you don't have to be a writer to sound like an expert.",
+    },
+    {
+      icon: ImageIcon,
+      title: 'Next-Gen Visual Marketing',
+      description:
+        'Instantly transform empty rooms with beautiful Virtual Staging. Generate unique, high-quality images for any marketing need, or use our intuitive editor to remove objects, replace skies, and perfect your property photos.',
     },
     {
       icon: Sparkles,
-      title: 'Google AI-Powered Generation',
-      description: 'Leverages cutting-edge Google AI technology combined with real estate-specific training to generate professional, engaging content at scale.',
-      benefit: 'Advanced AI that understands real estate',
-    },
-    {
-      icon: Palette,
-      title: 'Brand Customization',
-      description: 'AI learns and replicates your unique voice, tone, writing style, and brand personality across every piece of content you create.',
-      benefit: 'Every post sounds authentically you',
-    },
-    {
-      icon: Database,
-      title: 'CRM Integration',
-      description: 'Seamlessly connects with your existing CRM to automatically pull client data, listings, and contact information for personalized campaigns.',
-      benefit: 'No manual data entry or switching tools',
-    },
-    {
-      icon: Zap,
-      title: 'Listing Marketing Automation',
-      description: 'Automatically generates and schedules social posts, email campaigns, and property descriptions the moment a new listing goes live.',
-      benefit: 'Market new listings in seconds, not hours',
-    },
-    {
-      icon: Bot,
-      title: 'Digital Avatar Creation',
-      description: 'Create a digital clone of yourself to produce evergreen and hyper-local video content at scale. Never go behind a camera again while maintaining an authentic presence in all your content.',
-      benefit: 'Create unlimited video content without filming',
-    },
-  ];
-
-  const contentTypes = [
-    {
-      icon: MessageSquare,
-      title: 'Social Posts',
-      description: 'Engaging content for Facebook, Instagram, and LinkedIn that sounds authentically you',
-    },
-    {
-      icon: Mail,
-      title: 'Email Campaigns',
-      description: 'Personalized email newsletters and drip campaigns that convert',
-    },
-    {
-      icon: FileText,
-      title: 'Blog Posts',
-      description: 'SEO-optimized articles that establish you as the local market expert',
+      title: 'Always On-Brand',
+      description:
+        "Define your unique personality, tone, and style. Urban Nest's AI learns your brand voice, ensuring every piece of content—from a luxury listing to a casual social post—sounds authentically you.",
     },
   ];
 
   return (
-    <section id="features" className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16 lg:mb-20">
-          <div className="inline-block px-4 py-2 bg-amber-500 border-2 border-amber-600 rounded-full mb-4 text-sm font-bold text-white shadow-md">
-            The Urban Nest Difference
-          </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6">
-            Not Just Another AI Tool.
-            <span className="block mt-2">Your Personal Marketing Team.</span>
+    <section id="features" className="py-20 sm:py-28 lg:py-32 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-text-charcoal">
+            Your Complete AI Marketing Toolkit
           </h2>
-          <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            While other agents waste hours creating content or settle for generic AI that sounds robotic, you'll have a complete marketing ecosystem with <span className="font-bold text-gray-900">hyper-local intelligence</span>, <span className="font-bold text-gray-900">Google AI power</span>, <span className="font-bold text-gray-900">brand customization</span>, <span className="font-bold text-gray-900">CRM integration</span>, <span className="font-bold text-gray-900">listing automation</span>, and <span className="font-bold text-gray-900">digital avatars</span>.
-          </p>
         </div>
-
-        <div className="mb-20 lg:mb-28">
-          <h3 className="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-4 text-center">
-            Powerful AI Features That Transform Your Marketing
-          </h3>
-          <p className="text-center text-gray-700 mb-12 max-w-2xl mx-auto font-medium">
-            A complete marketing ecosystem designed specifically for real estate professionals
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            {coreFeatures.map((feature, index) => (
-              <div
-                key={index}
-                className="bg-white p-8 rounded-2xl shadow-bold hover:shadow-bolder transition-all duration-300 transform hover:-translate-y-2 border-2 border-gray-200 hover:border-amber-500 relative overflow-hidden group"
-              >
-                <div className="absolute top-0 right-0 w-32 h-32 bg-amber-50 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500"></div>
-                <div className="relative">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="w-14 h-14 rounded-xl bg-amber-500 border-2 border-amber-600 shadow-md flex items-center justify-center group-hover:bg-amber-600 transition-all">
-                      <feature.icon className="w-7 h-7 text-white" strokeWidth={2.5} />
-                    </div>
-                    <div className="w-6 h-6 bg-gray-900 rounded-full flex items-center justify-center text-white font-bold text-xs">
-                      {index + 1}
-                    </div>
-                  </div>
-                  <h4 className="text-xl font-extrabold text-gray-900 mb-3">
-                    {feature.title}
-                  </h4>
-                  <p className="text-gray-700 leading-relaxed mb-4 text-sm font-medium">
-                    {feature.description}
-                  </p>
-                  <div className="flex items-start gap-2 text-xs font-bold text-white bg-gray-900 border-2 border-gray-900 p-3 rounded-lg shadow-sm">
-                    <CheckCircle className="w-4 h-4 flex-shrink-0 mt-0.5 text-amber-400" />
-                    <span>{feature.benefit}</span>
-                  </div>
-                </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {coreFeatures.map((feature, index) => (
+            <div
+              key={index}
+              className="bg-gray-50 p-8 rounded-2xl shadow-bold border border-gray-100"
+            >
+              <div className="w-14 h-14 rounded-xl bg-gradient-cta shadow-md flex items-center justify-center mb-6">
+                <feature.icon className="w-7 h-7 text-white" />
               </div>
-            ))}
-          </div>
-          <div className="mt-12 text-center">
-            <div className="inline-flex items-center gap-2 text-gray-900 font-bold bg-amber-100 border-2 border-amber-500 px-6 py-3 rounded-lg shadow-md">
-              <Sparkles className="w-5 h-5 text-amber-600" />
-              <span>All features work together seamlessly to 10x your marketing efficiency</span>
+              <h3 className="text-xl font-bold text-text-charcoal mb-4">{feature.title}</h3>
+              <p className="text-text-charcoal">{feature.description}</p>
             </div>
-          </div>
-        </div>
-
-        <div>
-          <h3 className="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-4 text-center">
-            Every Type of Content You Need to Dominate Your Market
-          </h3>
-          <p className="text-center text-gray-700 mb-12 max-w-2xl mx-auto font-medium">
-            Stop juggling multiple tools. Create everything from one powerful platform.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {contentTypes.map((item, index) => (
-              <div
-                key={index}
-                className="bg-white p-8 rounded-2xl shadow-bold hover:shadow-bolder transition-all duration-300 transform hover:-translate-y-2 border-2 border-gray-200 hover:border-amber-500 relative overflow-hidden group"
-              >
-                <div className="absolute top-0 right-0 w-32 h-32 bg-amber-50 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500"></div>
-                <div className="relative">
-                  <div className="w-14 h-14 rounded-xl bg-amber-500 border-2 border-amber-600 shadow-md flex items-center justify-center mb-6 group-hover:bg-amber-600 transition-all">
-                    <item.icon className="w-7 h-7 text-white" strokeWidth={2.5} />
-                  </div>
-                  <h4 className="text-xl font-extrabold text-gray-900 mb-4">
-                    {item.title}
-                  </h4>
-                  <p className="text-gray-700 leading-relaxed mb-6 font-medium">
-                    {item.description}
-                  </p>
-                  <div className="flex items-center gap-2 text-sm font-bold text-amber-600">
-                    <CheckCircle className="w-4 h-4" />
-                    <span>Ready in seconds</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          ))}
         </div>
       </div>
     </section>
