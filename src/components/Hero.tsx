@@ -18,10 +18,10 @@ export default function Hero({ onGetStarted }: HeroProps) {
       setRotatingText((prev) => (prev + 1) % benefits.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [benefits.length]);
 
   return (
-    <section className="relative px-4 pt-8 pb-16 sm:px-6 lg:px-8 lg:pt-16 lg:pb-24 overflow-hidden bg-white">
+    <section className="relative px-4 pt-24 pb-16 sm:px-6 lg:px-8 lg:pt-32 lg:pb-24 overflow-hidden bg-white">
       <div className="absolute inset-0 bg-gradient-to-br from-amber-50 via-white to-orange-50 pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto relative">
