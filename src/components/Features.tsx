@@ -34,9 +34,9 @@ export default function Features() {
     },
     {
       icon: Bot,
-      title: 'Digital Avatar Creation',
-      description: 'Create a digital clone of yourself to produce evergreen and hyper-local video content at scale. Never go behind a camera again while maintaining an authentic presence in all your content.',
-      benefit: 'Create unlimited video content without filming',
+      title: 'AI-Powered Virtual Staging',
+      description: 'Instantly furnish empty listings. Save thousands on physical staging costs and help buyers emotionally connect and visualize their future home.',
+      benefit: 'Stage any listing in minutes',
     },
   ];
 
@@ -70,7 +70,7 @@ export default function Features() {
             <span className="block mt-2">Your Personal Marketing Team.</span>
           </h2>
           <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            While other agents waste hours creating content or settle for generic AI that sounds robotic, you'll have a complete marketing ecosystem with <span className="font-bold text-gray-900">hyper-local intelligence</span>, <span className="font-bold text-gray-900">Google AI power</span>, <span className="font-bold text-gray-900">brand customization</span>, <span className="font-bold text-gray-900">CRM integration</span>, <span className="font-bold text-gray-900">listing automation</span>, and <span className="font-bold text-gray-900">digital avatars</span>.
+            While other agents waste hours creating content or settle for generic AI that sounds robotic, you'll have a complete marketing ecosystem with <span className="font-bold text-gray-900">hyper-local intelligence</span>, <span className="font-bold text-gray-900">Google AI power</span>, <span className="font-bold text-gray-900">brand customization</span>, <span className="font-bold text-gray-900">CRM integration</span>, <span className="font-bold text-gray-900">listing automation</span>, and <span className="font-bold text-gray-900">AI-powered Virtual Staging</span>.
           </p>
         </div>
 

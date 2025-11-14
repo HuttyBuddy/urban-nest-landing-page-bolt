@@ -11,9 +11,9 @@ function RoadmapCard({ title, description }: Item) {
 
 export default function RoadmapSection() {
   const items: Item[] = [
-    { title: "Q4 2025: Private Beta Launch", description: "Onboard early adopters to refine Hyper-Local Engine, Brand Customization, and Digital Avatar." },
+    { title: "Q4 2025: Private Beta Launch", description: "Onboard early adopters to refine Hyper-Local Engine, Brand Customization, and Virtual Staging." },
     { title: "Q1 2026: Public Launch & Integrations", description: "Open to all agents with CRM integrations and analytics for marketing ROI." },
-    { title: "Q2 2026: PWA & AI Video 2.0", description: "Ship PWA; upgrade Digital Avatar with more customization and realism." },
+    { title: "Q2 2026: PWA & AI Video 2.0", description: "Ship PWA; upgrade Virtual Staging with more styles and realism." },
   ];
 
   return (
