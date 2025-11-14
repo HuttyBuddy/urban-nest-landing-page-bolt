@@ -33,7 +33,7 @@ export default function FAQ() {
     {
       icon: Palette,
       question: "How accurate is the Brand Customization? Will it really sound like me?",
-      answer: "Extremely accurate. Our Google AI analyzes your writing samples, identifies your unique patterns, preferred phrases, tone, humor style, and personality traits. The more samples you provide during setup, the better it gets. Most agents can't tell the difference between their own writing and Urban Nest's generated content."
+      answer: "Extremely accurate. Our AI analyzes your writing samples, identifies your unique patterns, preferred phrases, tone, humor style, and personality traits. The more samples you provide during setup, the better it gets. Most agents can't tell the difference between their own writing and Urban Nest's generated content."
     },
     {
       icon: Shield,
