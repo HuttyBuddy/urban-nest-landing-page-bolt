@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, ArrowRight } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import Logo from './Logo';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -15,117 +16,83 @@ export default function Header() {
     };
   }, []);
 
-  const updateUrlHash = (hash: string) => {
-    if (typeof window === 'undefined') return;
-
-    const newUrl = `${window.location.pathname}${window.location.search}${hash}`;
-    window.history.pushState(null, '', newUrl);
-  };
-
   const scrollToSection = (id: string) => {
-    if (typeof window === 'undefined') return;
-
     const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    updateUrlHash(`#${id}`);
-    setMobileMenuOpen(false);
-  };
-
-  const scrollToTop = () => {
-    if (typeof window === 'undefined') return;
-
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    updateUrlHash('');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
     setMobileMenuOpen(false);
   };
 
   const navItems = [
-    { label: 'How It Works', id: 'how-it-works' },
     { label: 'Features', id: 'features' },
-    { label: 'Founder', id: 'founder' },
-    { label: 'Roadmap', id: 'roadmap' },
+    { label: 'Testimonials', id: 'testimonials' },
     { label: 'FAQ', id: 'faq' },
-    { label: 'Pricing', id: 'early-access' },
   ];
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
+      className={`sticky top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/80 border-b border-gray-200 shadow-sm backdrop-blur-sm'
-          : 'bg-transparent'
+          ? 'bg-white/90 border-b border-gray-200 shadow-sm backdrop-blur-sm'
+          : 'bg-white'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
-          <button
-            onClick={scrollToTop}
-            className="flex items-center gap-3 transition-transform hover:scale-105 focus:outline-none flex-shrink-0"
-            aria-label="Urban Nest Home"
-          >
-            <img
-              src="/urban-nest-logo.png"
-              alt="Urban Nest"
-              className="h-10 sm:h-12 lg:h-14 w-auto object-contain"
-              loading="eager"
-            />
-            <div className="flex items-baseline text-2xl sm:text-3xl lg:text-4xl font-bold leading-none">
-              <span className="text-gray-700">Urban</span>
-              <span className="text-amber-500">Nest</span>
-            </div>
-          </button>
+        <div className="flex items-center justify-between h-20">
+          <a href="/" className="focus:outline-none">
+            <Logo />
+          </a>
 
           <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-gray-900 hover:text-amber-600 font-bold text-sm lg:text-base transition-colors duration-200"
+                className="text-text-charcoal hover:text-gold font-medium transition-colors duration-200"
               >
                 {item.label}
               </button>
             ))}
             <button
-              onClick={() => scrollToSection('early-access')}
-              className="group bg-gradient-cta hover:opacity-90 text-white font-bold px-6 py-3 rounded-lg transition-all duration-300 flex items-center gap-2 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-sm lg:text-base"
+              onClick={() => scrollToSection('final-cta')}
+              className="bg-gradient-cta text-white font-bold px-6 py-3 rounded-2xl shadow-bold hover:opacity-90 transition-all duration-300 transform hover:-translate-y-0.5"
             >
-              Get Early Access
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              Sign Up Free
             </button>
           </nav>
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500"
+            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors focus:outline-none"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? (
-              <X className="w-6 h-6 text-gray-900" />
+              <X className="w-6 h-6 text-text-charcoal" />
             ) : (
-              <Menu className="w-6 h-6 text-gray-900" />
+              <Menu className="w-6 h-6 text-text-charcoal" />
             )}
           </button>
         </div>
       </div>
 
       {mobileMenuOpen && (
-        <div className="md:hidden border-t-2 border-gray-200 bg-white shadow-bold">
+        <div className="md:hidden border-t border-gray-200 bg-white">
           <nav className="px-4 py-6 space-y-4">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left text-gray-900 hover:text-amber-600 font-bold text-base py-2 transition-colors duration-200"
+                className="block w-full text-left text-text-charcoal hover:text-gold font-medium text-lg py-2 transition-colors duration-200"
               >
                 {item.label}
               </button>
             ))}
             <button
-              onClick={() => scrollToSection('early-access')}
-              className="w-full bg-gradient-cta hover:opacity-90 text-white font-bold px-6 py-3 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 shadow-md text-base mt-4"
+              onClick={() => scrollToSection('final-cta')}
+              className="w-full bg-gradient-cta text-white font-bold px-6 py-4 rounded-2xl shadow-bold text-lg mt-4"
             >
-              Get Early Access
-              <ArrowRight className="w-4 h-4" />
+              Sign Up Free
             </button>
           </nav>
         </div>
