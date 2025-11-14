@@ -42,7 +42,7 @@ export default function FounderSection() {
 
             <div className="mt-8 flex justify-center md:justify-start">
               <a
-                href="https://www.linkedin.com/in/kevinhutty/"
+                href="https://www.linkedin.com/in/hutty-buddy/"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-bold py-3 px-8 rounded-full shadow-xl hover:shadow-2xl transform hover:-translate-y-1.5 transition-all duration-300"
