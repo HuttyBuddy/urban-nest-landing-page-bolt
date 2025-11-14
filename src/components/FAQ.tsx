@@ -28,7 +28,7 @@ export default function FAQ() {
     {
       icon: Zap,
       question: "How does Listing Marketing Automation work?",
-      answer: "The moment a new listing is added to your CRM or MLS, Urban Nest automatically detects it and generates a complete marketing campaign: social media posts for all platforms, email announcements, property descriptions, and more. You can review and edit before publishing, or set it to auto-publish and let it run on autopilot."
+      answer: "The moment a new listing is added to your CRM, Urban Nest automatically detects it and generates a complete marketing campaign: social media posts, email announcements, property descriptions, and more."
     },
     {
       icon: Palette,
