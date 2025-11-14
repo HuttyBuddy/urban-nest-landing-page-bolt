@@ -22,7 +22,7 @@ export default function SocialProof() {
       name: "Scott Brown",
       role: "Realtor, RE/MAX Gold",
       location: "Roseville, CA",
-      quote: "The listing automation feature is a lifesaver. New listings get marketed across all channels instantly. I create video content with my own digital clone now. The ROI is incredible.",
+      quote: "I'm genuinely impressed by the suite of Google AI features. The quality of the output is incredible, but the real magic is how seamlessly everything is integrated. I'm creating compelling, organic digital content for my listings and social media, and it all just works together perfectly.",
       rating: 5,
       metric: "50% cost reduction"
     }
