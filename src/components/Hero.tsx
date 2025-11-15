@@ -54,7 +54,7 @@ export default function Hero({ onGetStarted }: HeroProps) {
           </div>
 
           <p className="text-base sm:text-lg lg:text-xl text-gray-700 mb-8 lg:mb-10 leading-relaxed max-w-3xl mx-auto">
-            Urban Nest combines <span className="font-bold text-gray-900">Google AI-powered content generation</span> with <span className="font-bold text-gray-900">hyper-local market intelligence</span>, <span className="font-bold text-gray-900">brand customization</span>, <span className="font-bold text-gray-900">CRM integration</span>, <span className="font-bold text-gray-900">listing automation</span>, and your own <span className="font-bold text-gray-900">AI-powered Virtual Staging</span> to create content that actually converts—all while you focus on what matters: selling homes.
+            Urban Nest, by a real estate agent for real estate agents, combines <span className="font-bold text-gray-900">Google AI-powered content generation</span> with <span className="font-bold text-gray-900">hyper-local market intelligence</span>, <span className="font-bold text-gray-900">brand customization</span>, <span className="font-bold text-gray-900">CRM integration</span>, <span className="font-bold text-gray-900">listing automation</span>, and your own <span className="font-bold text-gray-900">AI-powered Virtual Staging</span> to create content that actually converts—all while you focus on what matters: selling homes.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
